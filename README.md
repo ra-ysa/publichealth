@@ -73,6 +73,22 @@ plt.show();
 ## Evolução do Projeto
 ~~~
 <Relate a evolução do projeto: possíveis problemas enfrentados e possíveis mudanças de trajetória. Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.>
+
+### Seleção de dados
+Rascunho:
+1- selecionamos, a princípio, os seguintes dados:
+IBGE - enfermeiros, médicos e leitos de UTI por estado e por município (https://mapasinterativos.ibge.gov.br/covid/saude/). São dados processados a partir de dados do CNES (Datasus), referentes a dezembro de 2019.
+COFEN - Enfermeiros por estado (http://www.cofen.gov.br/enfermagem-em-numeros)
+CNES (Datasus/Fiocruz), para extrair informações sobre hospitais, ainda não processadas pelo IBGE (https://bigdata-metadados.icict.fiocruz.br/dataset/cadastro-nacional-de-estabelecimentos-de-saude-cnes)
+Para comparações com outros países: OCDE (https://stats.oecd.org/index.aspx?DataSetCode=HEALTH_REAC) e OMS (https://www.who.int/data/gho/data/indicators)
+
+2- Observando com mais cuidado, notamos que:
+- O Tabnet/Datasus tem dados mais atualizados que aqueles processados pelo IBGE (maio/2020). O IBGE tem como diferencial ter criado colunas com infos sobre população e densidade. Mas isso é relativamente trivial de fazer, e os dados do Datasus são suficientemente limpos e organizados. Então, optamos por pegar de lá, pela atualidade. (Pegamos, inclusive, sobre hospitais, nos permitindo dispensar os arquivos da Fiocruz, não processados, que seriam mais difíceis/custosos pra extrair infos)
+- O COFEN tem infos discrepantes em relação ao Datasus. O Datasus tem dados fornecidos pelas secretarias municipais e estaduais de saúde (http://tabnet.datasus.gov.br/cgi/cnes/NT_RecursosHumanos.htm). O COFEN não especifica, mas é razoável imaginar que se trata daqueles registrados no conselho (pois seus números reportados são muito maiores que os do Datasus - ou seja, deve ter gente registrada que não necessariamente atua, ou atua mas não em estabelecimentos de saúde). Com isso, optamos por dropar os dados do COFEN e focar naqueles do Datasus. (Vale lembrar, porém, que, aparentemente, pelas quantidades, os dados reportados à OMS quanto a enfermeiros provavelmente do conselho; não sabemos como é a metodologia de report dos outros países)
+Optar por usar os dados do Tabnet/Datasus pra tudo, além de facilitar, tb é importante pela consistência, então vamos focar só neles mesmo. 
+- Infos da OCDE são redundantes em relação às da OMS, que são mais completas, então vamos usar só OMS
+Assim, restamos com: Datasus e OMS, apenas
+
 ~~~
 
 # Resultados e Discussão
