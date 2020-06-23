@@ -14,7 +14,8 @@
 ~~~
 
 # Equipe
-* `<nome completo>` - `<RA>`
+* `Deborah Sadetsky` - `150912`
+* `Raysa Masson Benatti` - `176483`
 
 # Vídeo do Projeto
 `<coloque um link para o vídeo apresentado o projeto.>`
@@ -74,7 +75,7 @@ plt.show();
 ~~~
 <Relate a evolução do projeto: possíveis problemas enfrentados e possíveis mudanças de trajetória. Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.>
 
-### Seleção de dados
+## Seleção de dados
 Rascunho:
 1- selecionamos, a princípio, os seguintes dados:
 IBGE - enfermeiros, médicos e leitos de UTI por estado e por município (https://mapasinterativos.ibge.gov.br/covid/saude/). São dados processados a partir de dados do CNES (Datasus), referentes a dezembro de 2019.
@@ -88,10 +89,11 @@ Para comparações com outros países: OCDE (https://stats.oecd.org/index.aspx?D
 Optar por usar os dados do Tabnet/Datasus pra tudo, além de facilitar, tb é importante pela consistência, então vamos focar só neles mesmo. 
 - Infos da OCDE são redundantes em relação às da OMS, que são mais completas, então vamos usar só OMS
 Assim, restamos com: Datasus e OMS, apenas
+~~~
 
 - Nem OMS nem OCDE têm infos globais sobre leitos de UTI especificamente, apenas "hospitals" e "hospital beds" (não sei se o último inclui leitos de UTI tb). No Datasus, dá pra separar. (Ref: artigo que discorre sobre a importância de padronização dos dados pra fazer comparações, e destaca como definições sobre critical care são bem diferentes entre países e regiões diferentes; pensando nisso, talvez comparações quanto a leitos de UTI não fizessem sentido at all, só dentro do Brasil, onde a gente sabe que o padrão é o mesmo)
 
-~~~
+
 
 # Resultados e Discussão
 ~~~
