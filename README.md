@@ -74,25 +74,22 @@ plt.show();
 ## Evolução do Projeto
 ~~~
 <Relate a evolução do projeto: possíveis problemas enfrentados e possíveis mudanças de trajetória. Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.>
-
-## Seleção de dados
-Rascunho:
-1- selecionamos, a princípio, os seguintes dados:
-IBGE - enfermeiros, médicos e leitos de UTI por estado e por município (https://mapasinterativos.ibge.gov.br/covid/saude/). São dados processados a partir de dados do CNES (Datasus), referentes a dezembro de 2019.
-COFEN - Enfermeiros por estado (http://www.cofen.gov.br/enfermagem-em-numeros)
-CNES (Datasus/Fiocruz), para extrair informações sobre hospitais, ainda não processadas pelo IBGE (https://bigdata-metadados.icict.fiocruz.br/dataset/cadastro-nacional-de-estabelecimentos-de-saude-cnes)
-Para comparações com outros países: OCDE (https://stats.oecd.org/index.aspx?DataSetCode=HEALTH_REAC) e OMS (https://www.who.int/data/gho/data/indicators)
-
-2- Observando com mais cuidado, notamos que:
-- O Tabnet/Datasus tem dados mais atualizados que aqueles processados pelo IBGE (maio/2020). O IBGE tem como diferencial ter criado colunas com infos sobre população e densidade. Mas isso é relativamente trivial de fazer, e os dados do Datasus são suficientemente limpos e organizados. Então, optamos por pegar de lá, pela atualidade. (Pegamos, inclusive, sobre hospitais, nos permitindo dispensar os arquivos da Fiocruz, não processados, que seriam mais difíceis/custosos pra extrair infos)
-- O COFEN tem infos discrepantes em relação ao Datasus. O Datasus tem dados fornecidos pelas secretarias municipais e estaduais de saúde (http://tabnet.datasus.gov.br/cgi/cnes/NT_RecursosHumanos.htm). O COFEN não especifica, mas é razoável imaginar que se trata daqueles registrados no conselho (pois seus números reportados são muito maiores que os do Datasus - ou seja, deve ter gente registrada que não necessariamente atua, ou atua mas não em estabelecimentos de saúde). Com isso, optamos por dropar os dados do COFEN e focar naqueles do Datasus. (Vale lembrar, porém, que, aparentemente, pelas quantidades, os dados reportados à OMS quanto a enfermeiros provavelmente do conselho; não sabemos como é a metodologia de report dos outros países)
-Optar por usar os dados do Tabnet/Datasus pra tudo, além de facilitar, tb é importante pela consistência, então vamos focar só neles mesmo. 
-- Infos da OCDE são redundantes em relação às da OMS, que são mais completas, então vamos usar só OMS
-Assim, restamos com: Datasus e OMS, apenas
 ~~~
 
-- Nem OMS nem OCDE têm infos globais sobre leitos de UTI especificamente, apenas "hospitals" e "hospital beds" (não sei se o último inclui leitos de UTI tb). No Datasus, dá pra separar. (Ref: artigo que discorre sobre a importância de padronização dos dados pra fazer comparações, e destaca como definições sobre critical care são bem diferentes entre países e regiões diferentes; pensando nisso, talvez comparações quanto a leitos de UTI não fizessem sentido at all, só dentro do Brasil, onde a gente sabe que o padrão é o mesmo)
+### Seleção de dados
+Inicialmente, o conjunto de dados escolhidos para basear a análise era composto pelos seguintes datasets:
+- IBGE: enfermeiros, médicos e leitos de UTI por estado e por município (https://mapasinterativos.ibge.gov.br/covid/saude/). Dados processados a partir do CNES (Cadastro Nacional de Estabelecimentos de Saúde)/Datasus, referentes a dezembro de 2019;
+- COFEN: profissionais de enfermagem (enfermeiros, auxiliares, técnicos e obstetrizes) por estado (http://www.cofen.gov.br/enfermagem-em-numeros), referentes a maio de 2020. A origem dos dados não é explicitada, mas pressupõe-se ser a quantidade de inscrições ativas no conselho; 
+- Datasus/Fiocruz: CNES - tabelas detalhadas com dados referentes a todos os estabelecimentos de saúde cadastrados no país, atualizado em dezembro de 2019 (https://bigdata-metadados.icict.fiocruz.br/dataset/cadastro-nacional-de-estabelecimentos-de-saude-cnes). A ideia inicial era usá-lo para extrair informações sobre hospitais, ainda não processadas pelo IBGE. Dados crus, não processados;
+- OCDE (https://stats.oecd.org/index.aspx?DataSetCode=HEALTH_REAC) e OMS (https://www.who.int/data/gho/data/indicators): indicadores de saúde de diversos países para comparações que enriquecessem a análise.
 
+Uma observação mais cuidadosa nos permitiu notar que:
+- O portal Tabnet/Datasus tem dados mais atualizados que aqueles processados pelo IBGE; sua última atualização é de maio de 2020. O IBGE tem como diferencial ter adicionado colunas com densidade de recursos por população e população absoluta para cada entrada (município ou estado); porém, os dados do Datasus são suficientemente limpos e organizados, e valem a pena pela atualidade e possibilidade de customização de tabulações no site, razão pela qual optamos, então, por utilizá-los no lugar das tabelas do IBGE e da Fiocruz (a última traria, ainda, dificuldades adicionais de processamento pelo tamanho). Duas tabelas do IBGE foram mantidas apenas para facilitar a extração do número de habitantes de cada estado e município (que achamos razoável julgar não ter sido atualizado entre dezembro/2019 e maio/2020);
+- As informações fornecidas pelo COFEN divergem daquelas que constam no Datasus. A título de exemplo: o COFEN acusa a existência de 565458 enfermeiros no país; para o Datasus, são 282634 no mesmo mês de referência (maio/2020). Considerando que o último reporta dados fornecidos pelas secretarias municipais e estaduais de saúde (http://tabnet.datasus.gov.br/cgi/cnes/NT_RecursosHumanos.htm), levantamos a hipótese de que a diferença se deve à existência de profissionais registrados no Conselho sem atuar, ou atuando fora de estabelecimentos de saúde. Diante disso, e em prol da consistência na análise, optamos por descartar o dataset do COFEN, usando os do Datasus também para recuperar informações sobre profissionais de enfermagem. Ressaltamos, contudo, que os números reportados pelo país à OMS são compatíveis com os do Conselho, não com os do Datasus (e desconhecemos a metodologia de report dos demais países);
+- Os dados da OCDE e os da OMS são redundantes, sendo que os da OMS são mais completos. Assim, optamos por descartar os datasets da OCDE, mantendo apenas os da OMS para comparações com outros países;
+- Nem OCDE nem OMS têm informações globais sobre leitos de UTI. Tais órgãos reportam apenas estatísticas sobre hospitais e leitos de hospitais de modo geral (sem especificar, contudo, se esses leitos incluem os de UTI). Assim, a comparação desse indicador entre o Brasil (cujas informações são facilmente discrimináveis no Datasus) e outros países restaria prejudicada; há, ainda, referências que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a critical care em diferentes países e regiões (https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf). Diante disso, concluímos que comparações na escala internacional considerando leitos de UTI não seriam informativas; optamos, assim, por limitar a análise desse indicador ao âmbito nacional, e efetuar comparações com outros países somente para os outros indicadores (médicos, profissionais de enfermagem e hospitais), para os quais parece existir uma homogeneidade de dados aceitável. 
+
+Com essas ressalvas levadas em consideração, a seleção final de dados é a que se encontra descrita na seção <b>Bases de Dados</b>.
 
 
 # Resultados e Discussão
