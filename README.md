@@ -89,6 +89,8 @@ Optar por usar os dados do Tabnet/Datasus pra tudo, além de facilitar, tb é im
 - Infos da OCDE são redundantes em relação às da OMS, que são mais completas, então vamos usar só OMS
 Assim, restamos com: Datasus e OMS, apenas
 
+- Nem OMS nem OCDE têm infos globais sobre leitos de UTI especificamente, apenas "hospitals" e "hospital beds" (não sei se o último inclui leitos de UTI tb). No Datasus, dá pra separar. 
+
 ~~~
 
 # Resultados e Discussão
