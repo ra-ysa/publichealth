@@ -89,7 +89,7 @@ Uma observação mais cuidadosa nos permitiu notar que:
 - Os dados da OCDE e os da OMS são redundantes, sendo que os da OMS são mais completos. Assim, optamos por descartar os datasets da OCDE, mantendo apenas os da OMS para comparações com outros países;
 - Nem OCDE nem OMS têm informações globais sobre leitos de UTI. Tais órgãos reportam apenas estatísticas sobre hospitais e leitos de hospitais de modo geral (sem especificar, contudo, se esses leitos incluem os de UTI). Assim, a comparação desse indicador entre o Brasil (cujas informações são facilmente discrimináveis no Datasus) e outros países restaria prejudicada; há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a critical care em diferentes países e regiões. Diante disso, concluímos que comparações na escala internacional considerando leitos de UTI não seriam informativas; optamos, assim, por limitar a análise desse indicador ao âmbito nacional, e efetuar comparações com outros países somente para os outros indicadores (médicos, profissionais de enfermagem e hospitais), para os quais parece existir uma homogeneidade de dados aceitável. 
 
-Com essas ressalvas levadas em consideração, a seleção final de dados é a que se encontra descrita na seção [<b>Bases de Dados</b>](#-bases-de-dados).
+Com essas ressalvas levadas em consideração, a seleção final de dados é a que se encontra descrita na seção [<b>Bases de Dados</b>](#bases-de-dados).
 
 
 # Resultados e Discussão
