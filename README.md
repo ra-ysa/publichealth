@@ -28,6 +28,27 @@
 ## Perguntas de Pesquisa
 ~~~
 <Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.>
+Rascunho:
+HOSPITAIS
+quantos % dos municípios não têm hospital at all e onde eles se concentram
+% de públicos e privados em cada município/estado
+
+LEITOS UTI
+quantos % são leitos covid - país, estado e municípios
+Quais municípios/estados têm maior % de leitos covid
+quantos % dos municípios não têm UTI at all e onde eles se concentram
+(Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
+
+MÉDICOS/ENFERMEIROS
+quantos % atendem no sus - país, estado e municípios
+Quais municípios/estados têm maior % de profissionais que não atendem sus
+
+
+TODOS
+Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
+como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
+como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
+(Ver se rola: correlação com indicadores raciais?)
 ~~~
 
 ## Objetivos do projeto
