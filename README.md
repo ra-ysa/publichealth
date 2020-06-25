@@ -49,7 +49,7 @@ TODOS
 Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
 como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
 como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
-(Ver se rola: correlação com indicadores raciais?)
+(Ver se rola: correlação com indicadores raciais? % da pop que usa o SUS/não tem plano de saúde?)
 ~~~
 
 ## Objetivos do projeto
