@@ -1,0 +1,35 @@
+Região/Unidade da Federação,Quantidade SUS,Quantidade Não SUS
+Região Norte,26591,5867
+.. Rondônia,3478,876
+.. Acre,1463,96
+.. Amazonas,5270,804
+.. Roraima,1367,148
+.. Pará,11502,3112
+.. Amapá,1171,145
+.. Tocantins,2340,686
+Região Nordeste,98284,22777
+.. Maranhão,13134,1347
+.. Piauí,6883,1112
+.. Ceará,15182,4193
+.. Rio Grande do Norte,6294,1391
+.. Paraíba,6499,1818
+.. Pernambuco,18270,5179
+.. Alagoas,5344,1073
+.. Sergipe,2677,858
+.. Bahia,24001,5806
+Região Sudeste,114299,66815
+.. Minas Gerais,28241,14063
+.. Espírito Santo,5287,2802
+.. Rio de Janeiro,22762,12589
+.. São Paulo,58009,37361
+Região Sul,51139,22822
+.. Paraná,19318,8892
+.. Santa Catarina,11041,4271
+.. Rio Grande do Sul,20780,9659
+Região Centro-Oeste,24412,13497
+.. Mato Grosso do Sul,3801,1910
+.. Mato Grosso,5369,1939
+.. Goiás,10977,6807
+.. Distrito Federal,4265,2841
+Total,314725,131778
+&,,

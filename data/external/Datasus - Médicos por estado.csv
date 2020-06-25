@@ -1,0 +1,36 @@
+Região/Unidade da Federação,Sim,Não,Total
+Região Norte,16843,3027,19870
+.. Rondônia,2152,489,2641
+.. Acre,905,96,1001
+.. Amazonas,3950,735,4685
+.. Roraima,842,45,887
+.. Pará,6141,1311,7452
+.. Amapá,772,58,830
+.. Tocantins,2081,293,2374
+Região Nordeste,65120,12748,77868
+.. Maranhão,5154,760,5914
+.. Piauí,3738,396,4134
+.. Ceará,9542,2552,12094
+.. Rio Grande do Norte,4287,898,5185
+.. Paraíba,5573,803,6376
+.. Pernambuco,13117,2049,15166
+.. Alagoas,4015,546,4561
+.. Sergipe,3178,653,3831
+.. Bahia,16516,4091,20607
+Região Sudeste,153249,66098,219347
+.. Minas Gerais,34457,13630,48087
+.. Espírito Santo,6304,2805,9109
+.. Rio de Janeiro,29186,12627,41813
+.. São Paulo,83302,37036,120338
+Região Sul,51800,17927,69727
+.. Paraná,17773,7160,24933
+.. Santa Catarina,11711,4710,16421
+.. Rio Grande do Sul,22316,6057,28373
+Região Centro-Oeste,25221,8875,34096
+.. Mato Grosso do Sul,4611,986,5597
+.. Mato Grosso,3787,1639,5426
+.. Goiás,9444,2929,12373
+.. Distrito Federal,7379,3321,10700
+Ignorado/Exterior,-,-,-
+Total,312233,108675,420908
+&,,,
