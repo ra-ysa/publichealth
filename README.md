@@ -42,7 +42,7 @@ quantos % dos municípios não têm UTI at all e onde eles se concentram
 MÉDICOS/ENFERMEIROS
 quantos % atendem no sus - país, estado e municípios
 Quais municípios/estados têm maior % de profissionais que não atendem sus
-Razão medico:enf?
+Razão medico:enf? Dfça entre quantos estao no sus?
 
 
 TODOS
