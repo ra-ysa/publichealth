@@ -33,8 +33,8 @@ def processa_paises():
 	enf_10k = util.match(nome, who_nurses, "Nursing and midwifery personnel (per 10 000 population)", "Country")
 
 	dados = {'País': nome,
-		'Enfermeiros - Total': enf_total,
-		'Enfermeiros a cada 10k habitantes': enf_10k,
+		'Profissionais de enfermagem - Total': enf_total,
+		'Profissionais de enfermagem a cada 10k habitantes': enf_10k,
 		'Médicos - Total': med_total,
 		'Médicos a cada 10k habitantes': med_10k}
 
