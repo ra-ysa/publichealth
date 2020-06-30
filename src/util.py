@@ -40,7 +40,7 @@ ufs = {12: "AC", 27: "AL", 16: "AP", 13: "AM", 29: "BA",
 		23: "CE", 53: "DF", 32: "ES", 52: "GO", 21: "MA",
 		51: "MT", 50: "MS", 31: "MG", 15: "PA", 25: "PB",
 		41: "PR", 26: "PE", 22: "PI", 24: "RN", 43: "RS",
-		33: "RJ", 11: "RO", 14: "RO", 42: "SC", 35: "SP",
+		33: "RJ", 11: "RO", 14: "RR", 42: "SC", 35: "SP",
 		28: "SE", 17: "TO"}
 
 # retira linhas desnecessarias ou sem informacao de um dataset (ex: UF desconhecida)
