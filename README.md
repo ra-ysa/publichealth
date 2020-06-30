@@ -1,12 +1,12 @@
 # Ciência e visualização de dados em Saúde Pública: um panorama de indicadores no Brasil
-# Data science and visualization in Public Health: an overview of indicators in Brazil
+## Data science and visualization in Public Health: an overview of indicators in Brazil
 
-# Descrição Resumida do Projeto
+# Resumo
 ~~~
 <Descreva resumidamente o que fará o projeto. O resumo idealmente deve: apresentar o contexto; indicar o problema; apresentar a sua solução para o problema; indicar porque a sua solução é melhor do que os esforços atuais (não obrigatório); concluir com os resultados alcançados.>
 ~~~
 
-# Abstract in English
+# Abstract
 ~~~
 <English version of the abstract.>
 ~~~
@@ -91,7 +91,7 @@ As tabulações escolhidas foram as seguintes:
 Ferramenta | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
 Python | https://www.python.org/ | Linguagem de programação interpretada de alto nível, usada para processar os dados, efetuar análises estatísticas e gerar visualizações.
-Pandas | https://pandas.pydata.org/ | Biblioteca Python de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python.
+Pandas | https://pandas.pydata.org/ | Biblioteca de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python.
 
 # Metodologia
 ~~~
@@ -107,6 +107,15 @@ Estudo bibliográfico
 <Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
 
 Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.>
+Etapas:
+0- estudo bibliográfico das referências
+1- seleção das bases de dados pertinentes; estudo exploratório dos dados
+2- seleção de atributos de interesse e processamento
+3- geração de visualizações
+4- definição de análises estatísticas pertinentes e realização das análises
+5- compilação dos resultados
+
+escrita do relatório: pervasiva/iterativa
 ~~~
 
 ~~~python
