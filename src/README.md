@@ -6,4 +6,4 @@ Foi usada, também, a biblioteca [Pandas](https://pandas.pydata.org/ "Pandas").
 O trabalho foi executado no sistema operacional Ubuntu 18.04.4 LTS. 
 
 ### Execução
-Para executar, abra o terminal no diretório correspondente (``publichealth/src``) e rode o comando ``python3 __main__.py``.
+Para executar (assumindo Python 3+ e Pandas instalados), abra o terminal no diretório correspondente (``publichealth/src``) e rode o comando ``python3 __main__.py``.
