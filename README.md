@@ -59,14 +59,14 @@ como o estado se posiciona em relação à média do país, do mundo e de alguma
 # Recursos e Métodos
 
 ## Bases de Dados
-`<Elencar bases de dados utilizadas no projeto preferencialmente no formato da tabela a seguir.>`
+
 Base de Dados | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
-Datasus - CNES - Recursos Humanos a partir de 2007 | https://bit.ly/380TRfF | Base de dados de recursos humanos em saúde registrados no Brasil, usada para extrair indicadores sobre recursos selecionados`
+Datasus - CNES - Recursos Humanos a partir de 2007 | https://bit.ly/380TRfF | Base de dados de recursos humanos em saúde registrados no Brasil, usada para extrair indicadores sobre recursos selecionados
 Datasus - CNES - Estabelecimentos | https://bit.ly/3fSAMz1 | Base de dados de estabelecimentos de saúde registrados no Brasil, usada para extrair indicadores sobre estabelecimentos selecionados
 Datasus - CNES - Recursos Físicos | https://bit.ly/2NucsY4 | Base de dados de recursos físicos em saúde registrados no Brasil, usada para extrair indicadores sobre recursos selecionados
-IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | Base de dados de informações básicas oficiais`sobre cada UF brasileira, usada para extrair indicadores estaduais
-IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base de dados de informações básicas oficiais`sobre cada município brasileiro, usada para extrair indicadores municipais`
+IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | Base de dados de informações básicas oficiais sobre cada UF brasileira, usada para extrair indicadores estaduais
+IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base de dados de informações básicas oficiais sobre cada município brasileiro, usada para extrair indicadores municipais
 WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 
@@ -89,15 +89,18 @@ As tabulações escolhidas foram as seguintes:
 
 ## Ferramentas
 
-`<Elencar ferramentas utilizadas no projeto preferencialmente no formato da tabela a seguir.>`
 Ferramenta | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
-Ferramenta 1 | http://ferramenta1.org/ | `<Descrição da Ferramenta 1 e para que ela foi usada no projeto.>`
-Ferramenta 2 | http://ferramenta2.org/ | `<Descrição da Ferramenta 2 e para que ela foi usada no projeto.>`
+Python | https://www.python.org/ | Linguagem de programação interpretada de alto nível, usada para processar os dados, efetuar análises estatísticas e gerar visualizações.
+Pandas | https://pandas.pydata.org/ | Biblioteca Python de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python.
 
 # Metodologia
 ~~~
 <Abordagem/metodologia adotada, incluindo especificação de quais técnicas foram exploradas, tais como: aprendizagem de máquina, análise de redes, análise estatística, ou integração de uma ou mais técnicas.>
+Análise exploratória de dados
+Técnicas de estatística descritiva (quais? boxplot?)
+Análise estatística? algum teste de hipótese?
+Estudo bibliográfico
 ~~~
 
 ## Detalhamento do Projeto
@@ -119,6 +122,12 @@ plt.show();
 <Relate a evolução do projeto: possíveis problemas enfrentados e possíveis mudanças de trajetória. Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.>
 ~~~
 
+### Escolha de indicadores
+Inicialmente, o principal objetivo do trabalho era fazer uma análise comparativa de quatro indicadores entre municípios brasileiros, estados brasileiros e países em comparação com o Brasil. Os indicadores seriam: médicos; enfermeiros; hospitais; leitos de UTI. 
+(Explicar: acrescentamos leitos de hospital, internamente; internacionalmente, excluímos hospitais/leitos de UTI, por vários motivos: países têm critérios diferentes sobre oq eh critical care; dados de hospital beds em nível internacional não explicitam se inclui UTI ou não; há diversos tipos de estabelecimentos de saúde e, enqto no datasus eh tudo mto bem discriminado, em nível internacional nao tem como fazermos essa discriminaçao, entao nao haveria tanta homogeneidade; dificuldades no processamento desses dados)
+- Nem OCDE nem OMS têm informações globais sobre leitos de UTI. Tais órgãos reportam apenas estatísticas sobre hospitais e leitos de hospitais de modo geral (sem especificar, contudo, se esses leitos incluem os de UTI). Assim, a comparação desse indicador entre o Brasil (cujas informações são facilmente discrimináveis no Datasus) e outros países restaria prejudicada; há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a <i>critical care</i> em diferentes países e regiões. Diante disso, concluímos que comparações na escala internacional considerando leitos de UTI não seriam informativas; optamos, assim, por limitar a análise desse indicador ao âmbito nacional, e efetuar comparações com outros países somente para os indicadores de recursos humanos (médicos e profissionais de enfermagem), para os quais parece existir uma homogeneidade de dados aceitável. 
+(Arrumar isso!)
+
 ### Seleção de dados
 Inicialmente, o conjunto de dados escolhidos para basear a análise era composto pelos seguintes datasets:
 - [IBGE](https://mapasinterativos.ibge.gov.br/covid/saude/ "IBGE"): enfermeiros, médicos e leitos de UTI por estado e por município. Dados processados a partir do CNES (Cadastro Nacional de Estabelecimentos de Saúde)/Datasus, referentes a dezembro de 2019;
@@ -130,10 +139,16 @@ Uma observação mais cuidadosa nos permitiu notar que:
 - O portal [Tabnet/Datasus](http://www2.datasus.gov.br/DATASUS/index.php?area=02 "Tabnet Datasus") tem dados mais atualizados que aqueles processados pelo IBGE; sua última atualização é de maio de 2020. O IBGE tem como diferencial ter adicionado colunas com densidade de recursos por população e população absoluta para cada entrada (município ou estado); porém, os dados do Datasus são suficientemente limpos e organizados, e valem a pena pela atualidade e possibilidade de customização de tabulações no site, razão pela qual optamos, então, por utilizá-los no lugar das tabelas do IBGE e da Fiocruz (a última traria, ainda, dificuldades adicionais de processamento pelo tamanho). O número de habitantes de cada estado e município foi extraído de outras duas tabelas do IBGE, que trazem estimativas feitas para dezembro de 2019 (dado que o último censo oficial é de 2010);
 - As informações fornecidas pelo COFEN divergem daquelas que constam no Datasus. A título de exemplo: o COFEN acusa a existência de 565458 enfermeiros no país; para o Datasus, são 282634 no mesmo mês de referência (maio/2020). Considerando que o último [reporta dados fornecidos pelas secretarias municipais e estaduais de saúde](http://tabnet.datasus.gov.br/cgi/cnes/NT_RecursosHumanos.htm "Nota Técnica"), levantamos a hipótese de que a diferença se deve à existência de profissionais registrados no Conselho sem atuar, ou atuando fora de estabelecimentos de saúde. Diante disso, e em prol da consistência na análise, optamos por descartar o dataset do COFEN, usando os do Datasus também para recuperar informações sobre profissionais de enfermagem. Ressaltamos, contudo, que os números reportados pelo país à OMS são compatíveis com os do Conselho, não com os do Datasus (e desconhecemos a metodologia de report dos demais países);
 - Os dados da OCDE e os da OMS são redundantes, sendo que os da OMS são mais completos. Assim, optamos por descartar os datasets da OCDE, mantendo apenas os da OMS para comparações com outros países;
-- Nem OCDE nem OMS têm informações globais sobre leitos de UTI. Tais órgãos reportam apenas estatísticas sobre hospitais e leitos de hospitais de modo geral (sem especificar, contudo, se esses leitos incluem os de UTI). Assim, a comparação desse indicador entre o Brasil (cujas informações são facilmente discrimináveis no Datasus) e outros países restaria prejudicada; há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a <i>critical care</i> em diferentes países e regiões. Diante disso, concluímos que comparações na escala internacional considerando leitos de UTI não seriam informativas; optamos, assim, por limitar a análise desse indicador ao âmbito nacional, e efetuar comparações com outros países somente para os indicadores de recursos humanos (médicos e profissionais de enfermagem), para os quais parece existir uma homogeneidade de dados aceitável. 
-(Arrumar isso!)
+- Para gerar as visualizações, seria necessário incluir, ainda, informações espaciais sobre os municípios, estados e países analisados. (Os datasets do IBGE têm o atributo <i>shape</i>, que optamos por não usar por exigir processamento em softwares de GIS (sistema de informação geográfica), que não dominamos.)
 
 Com essas ressalvas levadas em consideração, a seleção final de dados é a que se encontra descrita na seção [<b>Bases de Dados</b>](#bases-de-dados).
+
+### Dificuldades e limitações
+Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades emergiram e algumas limitações se revelaram. Destacamo-las abaixo.
+
+- dificuldades de processamento de dados: nao computacionalmente (arquivos nao sao pesados), mas algoritmicamente, p/ unir os dados de maneira q fizesse sentido (dificuldades com picuinha de codigo e tals)
+- dificuldades na geraçao de mapas
+- Limitaçoes principalmente na análise entre países: pegamos sempre o dado mais recente, mas ele nao eh do mesmo ano pra países diferentes; nem todo país tem dados; por não conhecer a técnica de report de todos os países, não podemos garantir q os critérios sao sempre os mesmos - por exemplo, p/ o brasil, sabemos que a quantidade de médicos reportada à oms em 2018 eh x% maior que a que consta no datasus, e a de profissionais de enfermagem eh x% maior se considerarmos só enfermeiros; se considerarmos tb técnicos, eh x% maior (porém, segundo ILO, não era pra incluir técnicos...). Alguns países parecem ter qtdes de enfermeiros bem altas, o que nos faz pensar q talvez técnicos estejam sendo incluídos em alguns desses países tb, e não em outros. Isso, de certa forma, compromete a análise. P/ o brasil, nas tabelas intl, corrigimos o valor; p/ os outros países, por não conhecermos pormenores de seus dados, temos q confiar no que está lá. Vale lembrar q a análise intl é só um parâmetro a mais, o mais importante mesmo é a análise interna; as referências intl são interessantes, mas eh bom considerá-las com um grain of salt
 
 
 # Resultados e Discussão
@@ -142,7 +157,7 @@ Com essas ressalvas levadas em consideração, a seleção final de dados é a q
 
 A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?>
 
-<Colocar limitações - ex: números OMS podem ter problemas (enfermeiros superdimensionados em alguns lugares - inclui tecnicos? mas nao era pra incluir, segundo ILO)>
+Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser esquecidas; não invalida a análise, mas é importante deixar essas limitações claras (citar reportagem da nature q fala disso)
 ~~~
 
 # Conclusões
