@@ -134,15 +134,16 @@ plt.show();
 Inicialmente, o principal objetivo do trabalho era fazer uma análise comparativa de quatro indicadores entre municípios brasileiros, estados brasileiros e países em comparação com o Brasil. Os indicadores seriam: <b>médicos</b>; <b>enfermeiros</b>; <b>hospitais</b>; <b>leitos de UTI</b>. 
 Após análise exploratória dos dados e estudo mais aprofundado do problema, optamos por realizar as seguintes alterações:
 1. Acrescentar o indicador <b>leitos hospitalares (internação)</b> na análise nacional
+
 A informação sobre leitos hospitalares tipo internação (ou seja, de cuidados não intensivos) é facilmente recuperada no portal do Datasus e enriquece a análise, visto que observar a quantidade de hospitais por si só, embora útil como referência, é insuficiente para informar a abrangência de acesso a atendimento hospitalar - dado que hospitais podem ter capacidades muito heterogêneas entre si. 
 2. Excluir os indicadores hospitalares (<b>hospitais</b> e <b>leitos</b> de qualquer natureza) da análise mundial
+
 Tal decisão foi motivada por diversos fatores:
 - Não há informações globais sobre disponibilidade de leitos de UTI: bancos de dados da OCDE e da OMS não fazem essa distinção, reportando apenas estatísticas sobre hospitais e leitos de hospitais de modo geral (sem especificar, contudo, se esses leitos incluem os de UTI). Tampouco parece haver tal informação sistematizada em outros bancos de dados públicos, existindo somente dados esparsos sobre países ou regiões específicas em artigos acadêmicos. Assim, a comparação de leitos hospitalares entre o Brasil (cujas informações são facilmente discrimináveis no Datasus) e outros países restaria prejudicada; há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a <i>critical care</i> em diferentes países e regiões;
-- 
+- Embora a OMS compile dados sobre [estabelecimentos de saúde](https://apps.who.int/gho/data/view.main.30000 "Health infrastructure by country") e [leitos](https://apps.who.int/gho/data/view.main.HS07v "Hospital bed density by country"), não estão explícitas definições sobre os diferentes estabelecimentos e naturezas dos leitos; os dados nacionais fornecidos pelo Datasus, por sua vez, discriminam as categorias desses recursos, e suas definições podem ser encontradas facilmente na legislação. Essa discrepância prejudicaria a análise desses indicadores em nível internacional;
+- Os dados da OMS sobre estabelecimentos de saúde e leitos trouxeram dificuldades adicionais de processamento e limpeza em relação aos demais, diminuindo o benefício em relação ao custo de agregá-los na nossa análise.
+
 Diante desses fatores, concluímos que comparações na escala internacional considerando os indicadores hospitalares não seriam informativas; optamos, assim, por limitar a análise deles ao âmbito nacional, e efetuar comparações com outros países somente para os indicadores de recursos humanos (médicos e profissionais de enfermagem), para os quais parece existir uma homogeneidade de dados aceitável (ainda que [imperfeita](#dificuldades-e-limitações)). 
-
-(Explicar: acrescentamos leitos de hospital, internamente; internacionalmente, excluímos hospitais/leitos de UTI, por vários motivos: países têm critérios diferentes sobre oq eh critical care; dados de hospital beds em nível internacional não explicitam se inclui UTI ou não; há diversos tipos de estabelecimentos de saúde e, enqto no datasus eh tudo mto bem discriminado, em nível internacional nao tem como fazermos essa discriminaçao, entao nao haveria tanta homogeneidade; dificuldades no processamento desses dados)
-
 
 ### Seleção de dados
 Inicialmente, o conjunto de dados escolhidos para basear a análise era composto pelos seguintes datasets:
