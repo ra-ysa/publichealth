@@ -32,7 +32,7 @@ def read_mun():
 
 # salva o dataset como arquivo .csv no diretorio correto
 def write_to_csv(dataset, nome):
-	nome_csv = "../data/processed/" + nome + ".csv"
+	nome_csv = "../data/interim/" + nome + ".csv"
 	dataset.to_csv(nome_csv)
 
 # dicionario de codigos uf e suas respectivas siglas (ibge)
