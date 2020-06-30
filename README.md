@@ -16,8 +16,7 @@
 * Raysa Masson Benatti - 176483
 
 # Vídeo do Projeto
-`<coloque um link para o vídeo apresentado o projeto.>`
-O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqui](shorturl.at/eNP39 "Vídeo") (visível a pessoas logadas em e-mail com domínio Unicamp).
+O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqui](http://shorturl.at/eNP39 "Vídeo") (visível a pessoas logadas em e-mail com domínio Unicamp).
 
 # Introdução e Motivação
 ~~~
