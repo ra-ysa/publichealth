@@ -1,7 +1,5 @@
-# publichealth
-
-# Projeto `<Título em Português>`
-# Project `<Title in English>`
+# Ciência e visualização de dados em Saúde Pública: um panorama de indicadores no Brasil
+# Data science and visualization in Public Health: an overview of indicators in Brazil
 
 # Descrição Resumida do Projeto
 ~~~
@@ -19,6 +17,7 @@
 
 # Vídeo do Projeto
 `<coloque um link para o vídeo apresentado o projeto.>`
+O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqui](shorturl.at/eNP39 "Vídeo") (visível a pessoas logadas em e-mail com domínio Unicamp).
 
 # Introdução e Motivação
 ~~~
@@ -63,15 +62,13 @@ como o estado se posiciona em relação à média do país, do mundo e de alguma
 `<Elencar bases de dados utilizadas no projeto preferencialmente no formato da tabela a seguir.>`
 Base de Dados | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
-Datasus - CNES - Recursos Humanos a partir de 2007 | https://bit.ly/380TRfF | `<Descrição da Base 1 e para que ela foi usada no projeto.>`
-Datasus - CNES - Estabelecimentos | https://bit.ly/3fSAMz1 | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-Datasus - CNES - Recursos Físicos | https://bit.ly/2NucsY4 | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-WHO/Global Health Observatory - Hospital bed density | https://bit.ly/2BaJjP5 | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-WHO/Global Health Observatory - Health infrastructure | https://bit.ly/2Yttyf0 | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
-WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | `<Descrição da Base 2 e para que ela foi usada no projeto.>`
+Datasus - CNES - Recursos Humanos a partir de 2007 | https://bit.ly/380TRfF | Base de dados de recursos humanos em saúde registrados no Brasil, usada para extrair indicadores sobre recursos selecionados`
+Datasus - CNES - Estabelecimentos | https://bit.ly/3fSAMz1 | Base de dados de estabelecimentos de saúde registrados no Brasil, usada para extrair indicadores sobre estabelecimentos selecionados
+Datasus - CNES - Recursos Físicos | https://bit.ly/2NucsY4 | Base de dados de recursos físicos em saúde registrados no Brasil, usada para extrair indicadores sobre recursos selecionados
+IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | Base de dados de informações básicas oficiais`sobre cada UF brasileira, usada para extrair indicadores estaduais
+IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base de dados de informações básicas oficiais`sobre cada município brasileiro, usada para extrair indicadores municipais`
+WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
+WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 
 - Os dados da Organização Mundial da Saúde e do IBGE foram obtidos diretamente, sem filtragens, pelo download das tabelas em formato .csv.
 - Os dados do Tabnet/Datasus foram obtidos selecionando-se as tabulações desejadas no formato de colunas separadas por ";", em plain text; esse conteúdo foi transferido para uma planilha em LibreOffice Calc e salvo no formato .csv, ajustando-se a codificação de caracteres para Unicode UTF-8. O ajuste foi necessário pois a exportação automática para arquivos .csv oferecida pelo site resulta em arquivos com caracteres corrompidos, devido a uma incompatibilidade na codificação.  
