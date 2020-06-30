@@ -136,6 +136,7 @@ Após análise exploratória dos dados e estudo mais aprofundado do problema, op
 1. Acrescentar o indicador <b>leitos hospitalares (internação)</b> na análise nacional
 
 A informação sobre leitos hospitalares tipo internação (ou seja, de cuidados não intensivos) é facilmente recuperada no portal do Datasus e enriquece a análise, visto que observar a quantidade de hospitais por si só, embora útil como referência, é insuficiente para informar a abrangência de acesso a atendimento hospitalar - dado que hospitais podem ter capacidades muito heterogêneas entre si. 
+
 2. Excluir os indicadores hospitalares (<b>hospitais</b> e <b>leitos</b> de qualquer natureza) da análise mundial
 
 Tal decisão foi motivada por diversos fatores:
