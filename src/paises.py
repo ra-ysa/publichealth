@@ -2,6 +2,7 @@
 
 import pandas as pd 
 import util 
+import stats 
 
 def processa_paises():
 
@@ -40,3 +41,4 @@ def processa_paises():
 
 	df = pd.DataFrame(data=dados)
 	util.write_to_csv(df, "Mundo (OMS)")
+	stats.stats_paises(df)

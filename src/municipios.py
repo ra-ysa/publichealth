@@ -2,6 +2,7 @@
 
 import pandas as pd 
 import util 
+import stats 
 
 def processa_municipios():
 
@@ -153,6 +154,17 @@ def processa_municipios():
 
 	leitos_covid_10k = util.pop_ratio(leitos_covid_total, 10000, pop)
 
+	# deficit ou excesso de profissionais de saude no municipio
+	# em relacao a densidade populacional
+	# considerando referencia oms (health workforce requirements, 2016)
+	# recomendado = 44.5 medicos/enfs a cada 10k habitantes 
+	rel_prof_saude_recomend = []
+	recomend = 44.5
+	for i in range(len(enf_total)):
+		med_e_enf_10k = med_10k[i] + enf_10k[i]
+		dfca = med_e_enf_10k - recomend # valor pos indica excesso; valor neg indica deficit
+		rel_prof_saude_recomend.append(round((dfca*pop[i])/10000, 2))
+
 
 	dados = {'Código Municipal': cod,
 		'Município': nome,
@@ -168,6 +180,7 @@ def processa_municipios():
 		'Médicos - Total': med_total,
 		'%' + ' de médicos SUS': med_sus_percent,
 		'Médicos a cada 10k habitantes': med_10k,
+		'Déficit ou excesso de médicos/enfermeiros': rel_prof_saude_recomend,
 		'Hospitais públicos': hosp_publ,
 		'Hospitais não-públicos': hosp_npubl,
 		'Hospitais - Total': hosp_total,
@@ -191,3 +204,4 @@ def processa_municipios():
 
 	df = pd.DataFrame(data=dados)
 	util.write_to_csv(df, "Brasil - Municípios")
+	stats.stats_municipios(df)
