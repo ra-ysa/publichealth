@@ -51,9 +51,46 @@ como o estado se posiciona em relação à média do país, do mundo e de alguma
 ~~~
 
 ## Objetivos do projeto
-~~~
-<Como seu projeto propôs abordar o problema apresentado.>
-~~~
+
+Esse projeto tem um foco grande na parte de visualização de dados.
+Pensando nisso, um dos nossos objetivos é construir visualizações simples e didáticas dos seguintes dados:
+    
+- Quantidade de hospitais públicos e não públicos por estado brasileiro
+- Quantidade de hospitais públicos e não públicos por município brasileiro
+- Quantidade de hospitais públicos e não públicos por grande região do Brasil
+- Quantidade de enfermeiros do SUS ou não por estado brasileiro
+- Quantidade de enfermeiros do SUS ou não por município brasileiro
+- Quantidade de enfermeiros do SUS ou não por grande região do Brasil
+- Quantidade de enfermeiros por país
+- Quantidade de médicos do SUS ou não por estado brasileiro
+- Quantidade de médicos do SUS ou não por município brasileiro
+- Quantidade de médicos do SUS ou não por grande região do Brasil
+- Quantidade de médicos por país
+- Quantidade de leitos de internação do SUS ou não por estado brasileiro
+- Quantidade de leitos de internação do SUS ou não por município brasileiro
+- Quantidade de leitos de internação do SUS ou não por grande região do Brasil
+- Quantidade de leitos de UTI do SUS ou não por estado brasileiro
+- Quantidade de leitos de UTI do SUS ou não por município brasileiro
+- Quantidade de leitos de UTI do SUS ou não por grande região do Brasil
+- Enfermeiros a cada 10k habitantes por estado brasileiro
+- Enfermeiros a cada 10k habitantes por município brasileiro
+- Enfermeiros a cada 10k habitantes por grande região do Brasil
+- Médicos a cada 10k habitantes por país
+- Médicos a cada 10k habitantes por estado brasileiro
+- Médicos a cada 10k habitantes por município brasileiro
+- Médicos a cada 10k habitantes por grande região do Brasil
+- Médicos a cada 10k habitantes por país
+- Hospitais a cada 10k habitantes por estado brasileiro
+- Hospitais a cada 10k habitantes por município brasileiro
+- Hospitais a cada 10k habitantes por grande região do Brasil
+- Leitos (internação) a cada 10k habitantes por estado brasileiro
+- Leitos (internação) a cada 10k habitantes por município brasileiro
+- Leitos (internação) a cada 10k habitantes por grande região do Brasil
+- Leitos UTI a cada 10k habitantes por estado brasileiro
+- Leitos UTI a cada 10k habitantes por município brasileiro
+- Leitos UTI a cada 10k habitantes por grande região do Brasil
+
+Além disso, um ponto importante também é realizar algumas análises estatísticas dos dados coletados e, utilizar um fácil visualização para aprersentá-las.
 
 # Recursos e Métodos
 
@@ -68,7 +105,12 @@ IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | Base de dados d
 IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base de dados de informações básicas oficiais sobre cada município brasileiro, usada para extrair indicadores municipais
 WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
+GISMAPS - GeoJSON das Grandes Regiões do Brasil  2019| https://gismaps.com.br/downloads/major-regions-of-brazil-geojson/ | Arquivo Geojson com o mapa das Grandes Regiões do Brasil
+Plotly Datasets - 2014 World Gdp With Codes | https://github.com/plotly/datasets/blob/master/2014_world_gdp_with_codes.csv | Base de dados com os Codes dos países
+Github Sandeco - GeoJSON dos Estados brasileiros | https://github.com/sandeco/CanalSandeco/blob/master/covid-19/br_states.json | Arquivo Geojson com o mapa das Estados do Brasil
+Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://github.com/tbrugz/geodata-br | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado
 
+- Os arquivos Geojson foram todos salvos no formato .json.
 - Os dados da Organização Mundial da Saúde e do IBGE foram obtidos diretamente, sem filtragens, pelo download das tabelas em formato .csv.
 - Os dados do Tabnet/Datasus foram obtidos selecionando-se as tabulações desejadas no formato de colunas separadas por ";", em plain text; esse conteúdo foi transferido para uma planilha em LibreOffice Calc e salvo no formato .csv, ajustando-se a codificação de caracteres para Unicode UTF-8. O ajuste foi necessário pois a exportação automática para arquivos .csv oferecida pelo site resulta em arquivos com caracteres corrompidos, devido a uma incompatibilidade na codificação.  
 As tabulações escolhidas foram as seguintes:
@@ -92,6 +134,8 @@ Ferramenta | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
 Python | https://www.python.org/ | Linguagem de programação interpretada de alto nível, usada para processar os dados, efetuar análises estatísticas e gerar visualizações.
 Pandas | https://pandas.pydata.org/ | Biblioteca de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python.
+Plotly | https://plotly.com/python/ | Biblioteca de análise e visualização de dados on-line.
+Jupyter | https://jupyter.org/ | Aplicação web para "desenvolver software de código aberto, padrões abertos e serviços para computação interativa em dezenas de linguagens de programação".
 
 # Metodologia
 ~~~
@@ -164,8 +208,12 @@ Com essas ressalvas levadas em consideração, a seleção final de dados é a q
 Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades emergiram e algumas limitações se revelaram. Destacamo-las abaixo.
 
 - <b>Pré-processamento e limpeza de dados</b>: Não houve dificuldades de processamento computacional, considerando que o tamanho dos dados era adequado para as máquinas utilizadas; houve, contudo, algumas dificuldades algorítmicas para efetuar o pré-processamento/limpeza adequadamente. Deixar os dados em um formato amigável para sua utilização na geração de visualizações e análises estatísticas exigiu concatená-los, em cada uma das granularidades (municipal, estadual e nacional), de modo que fizesse sentido; isso exigiu a escolha de atributos pertinentes e a adequação de diversas tabelas, além de processos tradicionais de limpeza (exclusão de linhas, remoção ou edição de caracteres inválidos, adaptações de tipos de variáveis, tratamento de casos especiais etc.). Tais dificuldades foram superadas com persistência e estudo das ferramentas, além de readequação do projeto quando necessário, conforme descrito nesta seção. A atividade de pré-processamento/limpeza foi, provavelmente, a que mais demandou tempo e trabalho do grupo;
-- <b>Geração de visualizaçeõs</b>: @debs explicar dificuldades encontradas no processo;
-- <b>Limitações dos dados utilizados</b>: Algumas limitações são intrísecas aos dados - seja por sua disponibilização, método de coleta ou outros aspectos. Um conjunto de dados é, afinal, um recorte da realidade, e não é factível esperar que seja possível expressá-la integralmente através deles. Abaixo, destacamos as limitações com as quais nos esbarramos no que diz respeito aos dados.
+- <b>Limitações dos dados utilizados</b>: Algumas limitações são intrísecas aos dados - seja por sua disponibilização, método de coleta ou outros aspectos. Um conjunto de dados é, afinal, um recorte da realidade, e não é factível esperar que seja possível expressá-la integralmente através deles. Abaixo, destacamos as limitações com as quais nos esbarramos no que diz respeito aos dados;
+- <b>Geração de visualizaçeõs</b>: 
+  - Houve dificuldade para encontrar os perímetros dos municípios e dos estados no formato necessario na utilização da biblioteca [Choropleth](https://plotly.com/python/choropleth-maps/). 
+  - Além disso, existiam várias divergências entre os nomes dos Municípios e dos países presentes nos dois arquivos utilizados na plotagem dos mapas (banco de dados e .json ou arquivo dos códigos dos países). Devido a essas divergencias, uma análise minuciosa foi feita para padronização dos nomes e, acabamos descobrindo algumas curiosidades sobre os nomes dos municípios brasileiros (estão descritas nos notebooks de visualização).
+  - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar um gráfico pouco poluído (cores utilização, disponibilização das informações, tamanho da imagem e da fonte, etc.)
+  - Uma ideia que surgiu da necessidade de fazer um gráfico não poluídos foi a presença de botões de seleção. Também foi uma dificuldade para entender como utilizá-los corretamente interligando com os dados disponibilizados nos mapas.
 
 <b>1)</b> Dados sobre hospitais brasileiros: no Datasus, é possível selecionar hospitais usando diversos atributos; contudo, a vinculação (ou não) do estabelecimento ao SUS não é um deles. Ou seja: ao contrário do que ocorre com os outros indicadores analisados, não é possível, pelo Datasus, saber se um hospital atende pacientes do SUS, de convênios médicos, particulares ou uma combinação destes. É possível, no entanto, selecioná-los pela sua esfera jurídica (pública ou privada); em razão disso, nossa análise considera hospitais públicos (administração pública estadual, municipal, do Distrito Federal ou outras; empresa pública ou sociedade de economia mista) versus não-públicos (entidades sem fins lucrativos; demais entidades empresariais). Lembramos, porém, que essa classificação não implica vinculação ao tipo de atendimento prestado: hospitais de natureza jurídica privada, por exemplo, podem atender pacientes do SUS; há hospitais que atendem pacientes de serviços diversos etc. 
 
@@ -188,6 +236,14 @@ Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser e
 ~~~
 
 # Trabalhos Futuros
-~~~
-<Indique trabalhos futuros a partir do ponto alcançado.>
-~~~
+
+Visualização:
+
+Com o intuito de divulgar esse trabalho, pensamos em hospedar todas as visualizações contruídas em um servidor. 
+Para isso, tivemos algumas ideias:
+  - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões. (As duas opções de mapas já foram contruídas)
+  - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios.
+  - Além dos mapas, existiria uma página com as análises resultantes dos dados coletados. Nesta parte adicionaremos informações do tipo 'Município com maior densidade de médicos no Brasil', etc.
+  
+ Análises:
+ @ray add analises interessantes para fazermos no futuro
