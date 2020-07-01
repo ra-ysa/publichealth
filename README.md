@@ -158,11 +158,13 @@ O percurso do trabalho se deu conforme as etapas descritas nesta seção.
 As referências bibliográficas selecionadas para embasar o trabalho ajudaram-nos a entender melhor os indicadores escolhidos e como obter padrões de referência para cada um deles quando se trata de analisar como eles interferem na adequação da assistência à saúde.
 
 - <b>Indicadores hospitalares</b>
+
 [Ravaghi et al](https://github.com/ra-ysa/publichealth/blob/master/references/2020-ravaghi-etal.pdf "Ravaghi et al, 2020") (2020) fazem uma revisão sistemática sobre modelos e métodos para determinação de números ótimos de leitos hospitalares; [Pinto e Campos](https://github.com/ra-ysa/publichealth/blob/master/references/2014-pinto-campos.pdf "Pinto, Campos, 2015") (2015), por sua vez, propõem modelos para estimar a quantidade ideal de leitos hospitalares para a cidade de Belo Horizonte. 
 
 [Wunsch](https://github.com/ra-ysa/publichealth/blob/master/references/2012-wunsch.pdf "Wunsch, 2012") (2012) tenta compreender se é possível determinar uma curva de Frank-Starling para estimar uma quantidade ótima de leitos de cuidado intensivo; [Prin e Wunsch](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") (2012) avaliam a possibilidade de comparar diferentes países ou regiões em relação a esse indicador. 
 
 - <b>Indicadores de recursos humanos</b>
+
 Para indicadores de recursos humanos, estudamos um [relatório de 2016](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "OMS, 2016") da OMS, que apresenta o resultado de estudos sobre requisitos mínimos de recursos humanos para cobertura universal em saúde conforme os [Objetivos de Desenvolvimento Sustentável](https://en.wikipedia.org/wiki/Sustainable_Development_Goals "SDGs"). 
 
 ### 1. Seleção das bases de dados pertinentes / Estudo exploratório dos dados
