@@ -164,21 +164,6 @@ escrita do relatório: pervasiva/iterativa
 
 ## Evolução do Projeto
 
-### Escolha de indicadores
-Inicialmente, o principal objetivo do trabalho era fazer uma análise comparativa de quatro indicadores entre municípios brasileiros, estados brasileiros e países em comparação com o Brasil. Os indicadores seriam: <b>médicos</b>; <b>enfermeiros</b>; <b>hospitais</b>; <b>leitos de UTI</b>. 
-Após análise exploratória dos dados e estudo mais aprofundado do problema, optamos por realizar as seguintes alterações:
-1) Acrescentar o indicador <b>leitos hospitalares (internação)</b> na análise nacional
-
-A informação sobre leitos hospitalares tipo internação (ou seja, de cuidados não intensivos) é facilmente recuperada no portal do Datasus e enriquece a análise, visto que observar a quantidade de hospitais por si só, embora útil como referência, é insuficiente para informar a abrangência de acesso a atendimento hospitalar - dado que hospitais podem ter capacidades muito heterogêneas entre si. 
-
-2) Excluir os indicadores hospitalares (<b>hospitais</b> e <b>leitos</b> de qualquer natureza) da análise mundial
-
-Embora a OMS compile dados sobre [estabelecimentos de saúde](https://apps.who.int/gho/data/view.main.30000 "Health infrastructure by country") e [leitos](https://apps.who.int/gho/data/view.main.HS07v "Hospital bed density by country"), optamos por não incluí-los na análise pelos seguintes fatores:
-- Não há informações globais sobre disponibilidade de leitos de UTI: bancos de dados da OCDE e da OMS não fazem essa distinção, reportando apenas estatísticas sobre leitos de hospitais de modo geral (sem especificar, contudo, a natureza dos leitos). Tampouco parece haver tal informação sistematizada em outros bancos de dados públicos, existindo somente dados esparsos sobre países ou regiões específicos em artigos acadêmicos. Há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a <i>critical care</i> em diferentes países e regiões;
-- Esses dados trouxeram dificuldades adicionais de pré-processamento e limpeza em relação aos demais, diminuindo o benefício em relação ao custo de agregá-los na análise.
-
-Diante dessas ponderações, optamos por por limitar a análise desses indicadores ao âmbito nacional, com os dados do Datasus, e efetuar comparações entre países somente para os indicadores de recursos humanos (médicos e profissionais de enfermagem), para os quais houve menos dificuldades de pré-processamento e parece existir uma homogeneidade de dados aceitável (ainda que [imperfeita](#dificuldades-e-limitações)). 
-
 ### Seleção de dados
 Inicialmente, o conjunto de dados escolhidos para basear a análise era composto pelos seguintes datasets:
 - [IBGE](https://mapasinterativos.ibge.gov.br/covid/saude/ "IBGE"): enfermeiros, médicos e leitos de UTI por estado e por município. Dados processados a partir do CNES (Cadastro Nacional de Estabelecimentos de Saúde)/Datasus, referentes a dezembro de 2019;
@@ -193,6 +178,21 @@ Uma observação mais cuidadosa nos permitiu notar que:
 - Para gerar as visualizações, seria necessário incluir, ainda, informações espaciais sobre os municípios, estados e países analisados. (Os datasets do IBGE têm atributos tipo <i>shape</i>, que optamos por não usar por demandarem processamento em softwares de GIS (sistema de informação geográfica), que não dominamos.)
 
 Com essas ressalvas levadas em consideração, a seleção final de dados é a que se encontra descrita na seção [<b>Bases de Dados</b>](#bases-de-dados).
+
+### Escolha de indicadores
+Inicialmente, o principal objetivo do trabalho era fazer uma análise comparativa de quatro indicadores entre municípios brasileiros, estados brasileiros e países em comparação com o Brasil. Os indicadores seriam: <b>médicos</b>; <b>enfermeiros</b>; <b>hospitais</b>; <b>leitos de UTI</b>. 
+Após análise exploratória dos dados e estudo mais aprofundado do problema, optamos por realizar as seguintes alterações:
+1) Acrescentar o indicador <b>leitos hospitalares (internação)</b> na análise nacional
+
+A informação sobre leitos hospitalares tipo internação (ou seja, de cuidados não intensivos) é facilmente recuperada no portal do Datasus e enriquece a análise, visto que observar a quantidade de hospitais por si só, embora útil como referência, é insuficiente para informar a abrangência de acesso a atendimento hospitalar - dado que hospitais podem ter capacidades muito heterogêneas entre si. 
+
+2) Excluir os indicadores hospitalares (<b>hospitais</b> e <b>leitos</b> de qualquer natureza) da análise mundial
+
+Embora a OMS compile dados sobre [estabelecimentos de saúde](https://apps.who.int/gho/data/view.main.30000 "Health infrastructure by country") e [leitos](https://apps.who.int/gho/data/view.main.HS07v "Hospital bed density by country"), optamos por não incluí-los na análise pelos seguintes fatores:
+- Não há informações globais sobre disponibilidade de leitos de UTI: bancos de dados da OCDE e da OMS não fazem essa distinção, reportando apenas estatísticas sobre leitos de hospitais de modo geral (sem especificar, contudo, a natureza dos leitos). Tampouco parece haver tal informação sistematizada em outros bancos de dados públicos, existindo somente dados esparsos sobre países ou regiões específicos em artigos acadêmicos. Há, ainda, [referências](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") que questionam esse tipo de comparação em nível internacional dada a ausência de padronização nas definições referentes a <i>critical care</i> em diferentes países e regiões;
+- Esses dados trouxeram dificuldades adicionais de pré-processamento e limpeza em relação aos demais, diminuindo o benefício em relação ao custo de agregá-los na análise.
+
+Diante dessas ponderações, optamos por por limitar a análise desses indicadores ao âmbito nacional, com os dados do Datasus, e efetuar comparações entre países somente para os indicadores de recursos humanos (médicos e profissionais de enfermagem), para os quais houve menos dificuldades de pré-processamento e parece existir uma homogeneidade de dados aceitável (ainda que [imperfeita](#dificuldades-e-limitações)). 
 
 ### Dificuldades e limitações
 Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades emergiram e algumas limitações se revelaram. Destacamo-las abaixo.
