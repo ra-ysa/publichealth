@@ -80,14 +80,16 @@ como o estado se posiciona em relação à média do país, do mundo e de alguma
 ~~~
 O trabalho foi guiado tendo como principal pergunta de pesquisa: <b>no contexto de avaliação de adequação da oferta de recursos essenciais em saúde pública, quão próximos estamos, no Brasil, das melhores práticas?</b>
 Essa pergunta se desdobra nas seguintes questões específicas:
-  - teste 
+- Identificação das melhores práticas
+  - Tendo em vista os indicadores <b>médicos</b>, <b>enfermeiros</b>, <b>hospitais</b> e <b>leitos hospitalares (inclusive de UTI)</b> e sua oferta para a população, quais são as melhores práticas e como elas são identificadas?
+- Panorama da situação brasileira
+  - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
+  - Se há desigualdade na distribuição desses recursos no país, qual é sua magnitude e quais são os lugares mais afetados por ela? 
+  - Como o Brasil se compara com o resto do mundo na disponibilidade de médicos e enfermeiros à população?
 
 ## Objetivos do projeto
 
-Esse projeto tem um foco grande na parte de visualização de dados.
-Traz-se uma opção para visualizar uma grande quantidade de dados de saúde pública, de forma simples e didática.
-Além disso, utilizando as visualizações criadas, queremos realizar análises estatísticas dos dados coletados.
-E, por fim, criar novas visualizações dessas análises.
+Além do objetivo principal de responder às perguntas de pesquisa, o trabalho se desdobra nos seguintes objetivos específicos: trazer opções para visualizar grandes quantidades de dados de saúde pública, de forma simples e didática; realizar análises estatísticas a partir dos dados coletados; criar visualizações dessas análises.
 
 # Recursos e Métodos
 
@@ -103,7 +105,7 @@ IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base d
 WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 GISMAPS - GeoJSON das Grandes Regiões do Brasil 2019 | https://bit.ly/3eRAw3a | Arquivo Geojson com o mapa das Grandes Regiões do Brasil, usado para plotar visualizações
-Plotly Datasets - 2014 World Gdp With Codes | https://bit.ly/31A0MLB | Base de dados com os Codes dos países
+Plotly Datasets - 2014 World Gdp With Codes | https://bit.ly/31A0MLB | Base de dados com os Codes dos países, usado para auxiliar nas plotagens de visualizações
 Github Sandeco - GeoJSON dos Estados brasileiros | https://bit.ly/31zk2c1 | Arquivo Geojson com o mapa das Estados do Brasil, usado para plotar visualizações
 Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://bit.ly/2NNjJlP | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado, usado para plotar visualizações
 
@@ -133,15 +135,15 @@ Python | https://www.python.org/ | Linguagem de programação interpretada de al
 Pandas | https://pandas.pydata.org/ | Biblioteca de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python.
 Plotly | https://plotly.com/python/ | Biblioteca de análise e visualização de dados on-line.
 Jupyter | https://jupyter.org/ | Aplicação web para "desenvolver software de código aberto, padrões abertos e serviços para computação interativa em dezenas de linguagens de programação".
+Matplotlib | https://matplotlib.org/ | Biblioteca de visualização, usada para produzir gráficos em linguagem Python.
+NumPy | https://numpy.org/ | Biblioteca de computação científica, usada para auxiliar nas tarefas de visualização performadas em linguagem Python.
 
 # Metodologia
-~~~
-<Abordagem/metodologia adotada, incluindo especificação de quais técnicas foram exploradas, tais como: aprendizagem de máquina, análise de redes, análise estatística, ou integração de uma ou mais técnicas.>
-Análise exploratória de dados
-Técnicas de estatística descritiva (quais? boxplot?)
-Análise estatística? algum teste de hipótese?
-Estudo bibliográfico
-~~~
+
+A metodologia adotada no trabalho baseou-se nas seguintes estratégias:
+- Estudo bibliográfico: as [referências](https://github.com/ra-ysa/publichealth/tree/master/references "Referências") foram estudadas para compreender quais são os padrões esperados de cada indicador escolhido;
+- Análise exploratória dos dados: a exploração manual, com eventual auxílio das [ferramentas](#ferramentas), foi necessária para selecionar os dados adequados, processá-los e escolher o que destacar deles; 
+- Análise estatística: baseada, principalmente, em técnicas de estatística descritiva e visualização. Para extrair conhecimento dos dados, foram gerados gráficos de diferentes tipos (boxplot, barra, scatter plot) e visualizações geoespaciais, com mapas coropléticos. 
 
 ## Detalhamento do Projeto
 ~~~
