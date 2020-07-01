@@ -2,14 +2,47 @@
 ## Data science and visualization in Public Health: an overview of indicators in Brazil
 
 # Resumo
-~~~
-<Descreva resumidamente o que fará o projeto. O resumo idealmente deve: apresentar o contexto; indicar o problema; apresentar a sua solução para o problema; indicar porque a sua solução é melhor do que os esforços atuais (não obrigatório); concluir com os resultados alcançados.>
-~~~
+
+Existe uma dificuldade grande de encontrar dados de saúde pública brasileira que tenham uma visualização agradável e simples para o usuário.
+Pensando nisso, decidimos buscar alguns dados, como:
+
+- Quantidade de hospitais públicos e não públicos por estado, município e região brasileira
+- Quantidade de enfermeiros do SUS ou não por estado, município e região brasileira
+- Quantidade de médicos do SUS ou não por estado, município e região brasileira
+- Quantidade de leitos de internação do SUS ou não por estado, município e região brasileira
+- Quantidade de leitos de UTI do SUS ou não por estado, município e região brasileira
+- Enfermeiros a cada 10k habitantes por estado, município e região brasileira
+- Médicos a cada 10k habitantes por estado, município e região brasileira
+- Hospitais a cada 100k habitantes por estado, município e região brasileira
+- Leitos (internação) a cada 10k habitantes por estado, município e região brasileira
+- Leitos UTI a cada 10k habitantes por estado, município e região brasileira
+
+Com os dados em mãos, criamos visualizações em forma de *mapas de Choropleth* para conseguirmos comparar, por meio de cores as densidades de hospitais, médicos, enfermeiros, leitos e hospitais entre diferentes municípios, estados e regiões brasileras.
+Além disso, também conseguimos os dados de quantidade e densidade de médicos e enfermeiros a cada 100k habitantes para diversos países, sendo possível criar uma visualização mais macro por países.
+
+Por fim, fizemos algumas análises estatísticas com o auxílio dessas visualizações.
+
 
 # Abstract
-~~~
-<English version of the abstract.>
-~~~
+
+Is very difficult to find a pleasent, clean and simple visualization of brazilian public health data.
+Thinking about it, we decided to look for some data, such as:
+
+- Number of public and non-public hospitals by state, municipality and Brazilian region
+- Number of SUS nurses or not by state, municipality and Brazilian region
+- Number of SUS doctors or not by state, municipality and Brazilian region
+- Number of SUS hospitalization beds or not by state, municipality and Brazilian region
+- Number of SUS ICU beds or not by state, municipality and Brazilian region
+- Nurses for every 10k inhabitants by state, municipality and Brazilian region
+- Doctors for every 10k inhabitants by state, municipality and Brazilian region
+- Hospitals per 100k inhabitants per state, municipality and Brazilian region
+- Beds (hospitalization) for every 10k inhabitants by state, municipality and Brazilian region
+- ICU beds for every 10k inhabitants by state, municipality and Brazilian region
+
+With the data in hand, we created visualizations using * Choropleth maps* to be able to compare, through colors, the densities of hospitals, doctors, nurses, beds and hospitals between different municipalities, states and Brazilian regions.
+In addition, we also obtained data of quantity and density of doctors and nurses per 100k inhabitants for different countries, making it possible to create a macro view.
+
+Finally, using these visualizations, we made some statistical analysis.
 
 # Equipe
 * Deborah Sadetsky - 150912
@@ -53,44 +86,9 @@ como o estado se posiciona em relação à média do país, do mundo e de alguma
 ## Objetivos do projeto
 
 Esse projeto tem um foco grande na parte de visualização de dados.
-Pensando nisso, um dos nossos objetivos é construir visualizações simples e didáticas dos seguintes dados:
-    
-- Quantidade de hospitais públicos e não públicos por estado brasileiro
-- Quantidade de hospitais públicos e não públicos por município brasileiro
-- Quantidade de hospitais públicos e não públicos por grande região do Brasil
-- Quantidade de enfermeiros do SUS ou não por estado brasileiro
-- Quantidade de enfermeiros do SUS ou não por município brasileiro
-- Quantidade de enfermeiros do SUS ou não por grande região do Brasil
-- Quantidade de enfermeiros por país
-- Quantidade de médicos do SUS ou não por estado brasileiro
-- Quantidade de médicos do SUS ou não por município brasileiro
-- Quantidade de médicos do SUS ou não por grande região do Brasil
-- Quantidade de médicos por país
-- Quantidade de leitos de internação do SUS ou não por estado brasileiro
-- Quantidade de leitos de internação do SUS ou não por município brasileiro
-- Quantidade de leitos de internação do SUS ou não por grande região do Brasil
-- Quantidade de leitos de UTI do SUS ou não por estado brasileiro
-- Quantidade de leitos de UTI do SUS ou não por município brasileiro
-- Quantidade de leitos de UTI do SUS ou não por grande região do Brasil
-- Enfermeiros a cada 10k habitantes por estado brasileiro
-- Enfermeiros a cada 10k habitantes por município brasileiro
-- Enfermeiros a cada 10k habitantes por grande região do Brasil
-- Médicos a cada 10k habitantes por país
-- Médicos a cada 10k habitantes por estado brasileiro
-- Médicos a cada 10k habitantes por município brasileiro
-- Médicos a cada 10k habitantes por grande região do Brasil
-- Médicos a cada 10k habitantes por país
-- Hospitais a cada 10k habitantes por estado brasileiro
-- Hospitais a cada 10k habitantes por município brasileiro
-- Hospitais a cada 10k habitantes por grande região do Brasil
-- Leitos (internação) a cada 10k habitantes por estado brasileiro
-- Leitos (internação) a cada 10k habitantes por município brasileiro
-- Leitos (internação) a cada 10k habitantes por grande região do Brasil
-- Leitos UTI a cada 10k habitantes por estado brasileiro
-- Leitos UTI a cada 10k habitantes por município brasileiro
-- Leitos UTI a cada 10k habitantes por grande região do Brasil
-
-Além disso, um ponto importante também é realizar algumas análises estatísticas dos dados coletados e, utilizar um fácil visualização para aprersentá-las.
+Traz-se uma opção para visualizar uma grande quantidade de dados de saúde pública, de forma simples e didática.
+Além disso, utilizando as visualizações criadas, queremos realizar análises estatísticas dos dados coletados.
+E, por fim, criar novas visualizações dessas análises.
 
 # Recursos e Métodos
 
