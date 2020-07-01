@@ -150,17 +150,28 @@ A metodologia adotada no trabalho baseou-se nas seguintes estratégias:
 <Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
 
 Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.>
-Etapas:
-0- estudo bibliográfico das referências
-1- seleção das bases de dados pertinentes; estudo exploratório dos dados
-2- seleção de atributos de interesse e pre-processamento
-3- geração de visualizações
-4- definição de análises estatísticas pertinentes e realização das análises
-5- compilação dos resultados
 
 escrita do relatório: pervasiva/iterativa
 ~~~
+O percurso do trabalho se deu conforme as etapas descritas nesta seção.
+### 0. Estudo bibliográfico das referências
+As referências bibliográficas selecionadas para embasar o trabalho ajudaram-nos a entender melhor os indicadores escolhidos e como obter padrões de referência para cada um deles quando se trata de analisar como eles interferem na adequação da assistência à saúde.
+[Ravaghi et al](https://github.com/ra-ysa/publichealth/blob/master/references/2020-ravaghi-etal.pdf "Ravaghi et al, 2020") (2020) concluem, a partir de uma revisão sistemática sobre modelos e métodos para determinação de números ótimos de leitos hospitalares, que não há como obter um padrão universal para esse valor sem considerar fatores que variam conforme o contexto regional ou hospitalar, como mudanças demográficas, tempo de estada do paciente, taxas de admissão e taxas de ocupação; ressaltam, ainda, a importância da atenção básica, da assistência integral à saúde e da colaboração e coordenação entre provedores de saúde como fatores que podem diminuir a demanda por recursos hospitalares. [Pinto e Campos](https://github.com/ra-ysa/publichealth/blob/master/references/2014-pinto-campos.pdf "Pinto, Campos, 2015") (2015) propõem modelos para estimar a quantidade ideal de leitos hospitalares para a cidade de Belo Horizonte; as estimativas variam entre 2.4 e 2.95 leitos para cada mil habitantes. 
+[Wunsch](https://github.com/ra-ysa/publichealth/blob/master/references/2012-wunsch.pdf "Wunsch, 2012") (2012) tenta compreender se é possível determinar uma curva de Frank-Starling para estimar uma quantidade ótima de leitos de cuidado intensivo; segundo propõe, o excesso de leitos pode ser prejudicial na medida em que aumenta a quantidade de intervenções desnecessárias e o custo total do sistema de saúde, mas a falta deles é potencialmente fatal, atrasando ou impedindo atendimentos imprescindíveis para manutenção da vida. A autora identifica fatores que influenciam o cálculo de um suposto padrão ótimo: incidência e gravidade de doenças crônicas na população; disponibilidade de outros serviços, como leitos hospitalares comuns; quanto espaço/recursos há para deixar "folgas" no sistema. Adverte, porém, que também para esse indicador não há um único padrão universal a ser observado, sendo que cada sistema de saúde deve ser guiado por avaliações do seu próprio contexto e necessidades. [Prin e Wunsch](https://github.com/ra-ysa/publichealth/blob/master/references/2012-prin-wunsch.pdf "Prin, Wunsch 2012") (2012) destacam, ainda, que comparar diferentes países ou regiões em relação a esse indicador pode não ser muito informativo, considerando que não há consenso sobre a definição de <i>critical care</i>. 
+Para indicadores de recursos humanos, contudo, parece ser mais factível encontrar padrões de referência que ajudem a garantir a cobertura mínima necessária. Em [relatório de 2016](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "OMS, 2016"), a OMS apresenta o resultado de estudos sobre requisitos mínimos de recursos humanos para cobertura universal em saúde conforme os [Objetivos de Desenvolvimento Sustentável](https://en.wikipedia.org/wiki/Sustainable_Development_Goals "SDGs"). Atualizando estudos anteriores feitos a respeito, novos fatores entraram no cálculo, e o valor de 4.45 médicos e enfermeiros/obstetrizes (somados) a cada mil habitantes (ou 44.5 a cada dez mil) foi obtido como o mínimo necessário para chegar à mediana (25%) do que é definido como uma alta cobertura em saúde (80% ou mais de adequação aos indicadores selecionados, que incluem cuidado pré-natal, cobertura a doenças infecciosas e crônicas, imunização, planejamento familiar e acesso a saneamento básico). O órgão destaca que se trata de uma referência apenas, dentre outras possíveis, e que há outros fatores importantes a considerar na formulação de políticas públicas em saúde, como especificidades locais/regionais, qualidade do atendimento prestado, integração entre diferentes profissionais de saúde e variabilidade na formação e habilidades desses profissionais. Ainda assim, é uma referência útil para entender o posicionamento de uma região de interesse - no nosso caso, o Brasil - em relação ao que é estabelecido como padrão internacional.
 
+### 1. Seleção das bases de dados pertinentes / Estudo exploratório dos dados
+
+### 2. Seleção de atributos de interesse e pré-processamento/limpeza
+
+### 3. Geração de visualizações
+
+### 4. Definição e realização de análises estatísticas pertinentes
+
+### 5. Compilação dos resultados
+
+### 6. Atividades pervasivas
+Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
 
 ## Evolução do Projeto
 
