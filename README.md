@@ -63,25 +63,24 @@ Rascunho:
 HOSPITAIS
 quantos % dos municípios não têm hospital at all e onde eles se concentram
 % de públicos e privados em cada município/estado
-
 LEITOS UTI
 quantos % são leitos covid - país, estado e municípios
 Quais municípios/estados têm maior % de leitos covid
 quantos % dos municípios não têm UTI at all e onde eles se concentram
 (Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
-
 MÉDICOS/ENFERMEIROS
 quantos % atendem no sus - país, estado e municípios
 Quais municípios/estados têm maior % de profissionais que não atendem sus
 Razão medico:enf? Dfça entre quantos estao no sus?
-
-
 TODOS
 Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
 como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
 como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
 (Ver se rola: correlação com indicadores raciais? % da pop que usa o SUS/não tem plano de saúde?)
 ~~~
+O trabalho foi guiado tendo como principal pergunta de pesquisa: <b>no contexto de avaliação de adequação da oferta de recursos essenciais em saúde pública, quão próximos estamos, no Brasil, das melhores práticas?</b>
+Essa pergunta se desdobra nas seguintes questões específicas:
+  - teste 
 
 ## Objetivos do projeto
 
@@ -103,10 +102,10 @@ IBGE - Limites Territoriais 2019 - UF | https://bit.ly/2NriFUL | Base de dados d
 IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base de dados de informações básicas oficiais sobre cada município brasileiro, usada para extrair indicadores municipais
 WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
-GISMAPS - GeoJSON das Grandes Regiões do Brasil  2019| https://gismaps.com.br/downloads/major-regions-of-brazil-geojson/ | Arquivo Geojson com o mapa das Grandes Regiões do Brasil
-Plotly Datasets - 2014 World Gdp With Codes | https://github.com/plotly/datasets/blob/master/2014_world_gdp_with_codes.csv | Base de dados com os Codes dos países
-Github Sandeco - GeoJSON dos Estados brasileiros | https://github.com/sandeco/CanalSandeco/blob/master/covid-19/br_states.json | Arquivo Geojson com o mapa das Estados do Brasil
-Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://github.com/tbrugz/geodata-br | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado
+GISMAPS - GeoJSON das Grandes Regiões do Brasil 2019 | https://bit.ly/3eRAw3a | Arquivo Geojson com o mapa das Grandes Regiões do Brasil, usado para plotar visualizações
+Plotly Datasets - 2014 World Gdp With Codes | https://bit.ly/31A0MLB | Base de dados com os Codes dos países
+Github Sandeco - GeoJSON dos Estados brasileiros | https://bit.ly/31zk2c1 | Arquivo Geojson com o mapa das Estados do Brasil, usado para plotar visualizações
+Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://bit.ly/2NNjJlP | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado, usado para plotar visualizações
 
 - Os arquivos Geojson foram todos salvos no formato .json.
 - Os dados da Organização Mundial da Saúde e do IBGE foram obtidos diretamente, sem filtragens, pelo download das tabelas em formato .csv.
@@ -206,12 +205,14 @@ Com essas ressalvas levadas em consideração, a seleção final de dados é a q
 Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades emergiram e algumas limitações se revelaram. Destacamo-las abaixo.
 
 - <b>Pré-processamento e limpeza de dados</b>: Não houve dificuldades de processamento computacional, considerando que o tamanho dos dados era adequado para as máquinas utilizadas; houve, contudo, algumas dificuldades algorítmicas para efetuar o pré-processamento/limpeza adequadamente. Deixar os dados em um formato amigável para sua utilização na geração de visualizações e análises estatísticas exigiu concatená-los, em cada uma das granularidades (municipal, estadual e nacional), de modo que fizesse sentido; isso exigiu a escolha de atributos pertinentes e a adequação de diversas tabelas, além de processos tradicionais de limpeza (exclusão de linhas, remoção ou edição de caracteres inválidos, adaptações de tipos de variáveis, tratamento de casos especiais etc.). Tais dificuldades foram superadas com persistência e estudo das ferramentas, além de readequação do projeto quando necessário, conforme descrito nesta seção. A atividade de pré-processamento/limpeza foi, provavelmente, a que mais demandou tempo e trabalho do grupo;
-- <b>Limitações dos dados utilizados</b>: Algumas limitações são intrísecas aos dados - seja por sua disponibilização, método de coleta ou outros aspectos. Um conjunto de dados é, afinal, um recorte da realidade, e não é factível esperar que seja possível expressá-la integralmente através deles. Abaixo, destacamos as limitações com as quais nos esbarramos no que diz respeito aos dados;
+
 - <b>Geração de visualizaçeõs</b>: 
-  - Houve dificuldade para encontrar os perímetros dos municípios e dos estados no formato necessario na utilização da biblioteca [Choropleth](https://plotly.com/python/choropleth-maps/). 
-  - Além disso, existiam várias divergências entre os nomes dos Municípios e dos países presentes nos dois arquivos utilizados na plotagem dos mapas (banco de dados e .json ou arquivo dos códigos dos países). Devido a essas divergencias, uma análise minuciosa foi feita para padronização dos nomes e, acabamos descobrindo algumas curiosidades sobre os nomes dos municípios brasileiros (estão descritas nos notebooks de visualização).
-  - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar um gráfico pouco poluído (cores utilização, disponibilização das informações, tamanho da imagem e da fonte, etc.)
-  - Uma ideia que surgiu da necessidade de fazer um gráfico não poluídos foi a presença de botões de seleção. Também foi uma dificuldade para entender como utilizá-los corretamente interligando com os dados disponibilizados nos mapas.
+  - Houve dificuldade para encontrar os perímetros dos municípios e dos estados no formato necessário para utilização da biblioteca [Choropleth](https://plotly.com/python/choropleth-maps/). 
+  - Além disso, existiam várias divergências entre os nomes dos municípios e dos países presentes nos dois arquivos utilizados na plotagem dos mapas (banco de dados e .json ou arquivo dos códigos dos países). Devido a essas divergências, uma análise minuciosa foi feita para padronização dos nomes e acabamos descobrindo algumas curiosidades sobre os nomes dos municípios brasileiros (estão descritas nos notebooks de visualização).
+  - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar gráficos pouco poluído (cores utilizadas, disponibilização das informações, tamanho da imagem e da fonte etc.)
+  - Uma ideia que surgiu da necessidade de fazer gráficos não poluídos foi a presença de botões de seleção. Também foi uma dificuldade entender como utilizá-los corretamente, interligando com os dados disponibilizados nos mapas.
+
+- <b>Limitações dos dados utilizados</b>: Algumas limitações são intrísecas aos dados - seja por sua disponibilização, método de coleta ou outros aspectos. Um conjunto de dados é, afinal, um recorte da realidade, e não é factível esperar que seja possível expressá-la integralmente através deles. Abaixo, destacamos as limitações com as quais nos esbarramos no que diz respeito aos dados.
 
 <b>1)</b> Dados sobre hospitais brasileiros: no Datasus, é possível selecionar hospitais usando diversos atributos; contudo, a vinculação (ou não) do estabelecimento ao SUS não é um deles. Ou seja: ao contrário do que ocorre com os outros indicadores analisados, não é possível, pelo Datasus, saber se um hospital atende pacientes do SUS, de convênios médicos, particulares ou uma combinação destes. É possível, no entanto, selecioná-los pela sua esfera jurídica (pública ou privada); em razão disso, nossa análise considera hospitais públicos (administração pública estadual, municipal, do Distrito Federal ou outras; empresa pública ou sociedade de economia mista) versus não-públicos (entidades sem fins lucrativos; demais entidades empresariais). Lembramos, porém, que essa classificação não implica vinculação ao tipo de atendimento prestado: hospitais de natureza jurídica privada, por exemplo, podem atender pacientes do SUS; há hospitais que atendem pacientes de serviços diversos etc. 
 
