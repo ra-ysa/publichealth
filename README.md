@@ -89,7 +89,7 @@ Essa pergunta se desdobra nas seguintes questões específicas:
 
 ## Objetivos do projeto
 
-Além do objetivo principal de responder às perguntas de pesquisa, o trabalho se desdobra nos seguintes objetivos específicos: trazer opções para visualizar grandes quantidades de dados de saúde pública, de forma simples e didática; realizar análises estatísticas a partir dos dados coletados; criar visualizações dessas análises.
+Além do objetivo principal de responder às perguntas de pesquisa, o trabalho se desdobra nos seguintes objetivos específicos: trazer opções para visualizar grandes quantidades de dados de saúde pública, de forma simples e didática; realizar análises estatísticas descritivas a partir dos dados coletados; criar visualizações dessas análises.
 
 # Recursos e Métodos
 
@@ -105,9 +105,9 @@ IBGE - Limites Territoriais 2019 - Municípios | https://bit.ly/2Yt8gxU | Base d
 WHO/Global Health Observatory - Medical doctors | https://bit.ly/2NvJrek | Base de dados de quantidade e densidade de médicos registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 WHO/Global Health Observatory - Nursing and midwifery personnel | https://bit.ly/2Z4c7Rm | Base de dados de quantidade e densidade de profissionais de enfermagem registrados por país, para os países com dados disponíveis, usada para extrair indicadores mundiais
 GISMAPS - GeoJSON das Grandes Regiões do Brasil 2019 | https://bit.ly/3eRAw3a | Arquivo Geojson com o mapa das Grandes Regiões do Brasil, usado para plotar visualizações
-Plotly Datasets - 2014 World Gdp With Codes | https://bit.ly/31A0MLB | Base de dados com os Codes dos países, usado para auxiliar nas plotagens de visualizações
+Plotly Datasets - 2014 World Gdp With Codes | https://bit.ly/31A0MLB | Base de dados com os Codes dos países, usada para auxiliar nas plotagens de visualizações
 Github Sandeco - GeoJSON dos Estados brasileiros | https://bit.ly/31zk2c1 | Arquivo Geojson com o mapa das Estados do Brasil, usado para plotar visualizações
-Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://bit.ly/2NNjJlP | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado, usado para plotar visualizações
+Github tbrugz - GeoJSONS dos Municípios brasileiros por estado | https://bit.ly/2NNjJlP | Arquivos Geojson com os perímetros dos municípios brasileiros dividido por estado, usados para plotar visualizações
 
 - Os arquivos Geojson foram todos salvos no formato .json.
 - Os dados da Organização Mundial da Saúde e do IBGE foram obtidos diretamente, sem filtragens, pelo download das tabelas em formato .csv.
@@ -161,17 +161,8 @@ Etapas:
 escrita do relatório: pervasiva/iterativa
 ~~~
 
-~~~python
-df = pd.read_excel("/content/drive/My Drive/Colab Notebooks/dataset.xlsx");
-sns.set(color_codes=True);
-sns.distplot(df.Hemoglobin);
-plt.show();
-~~~
 
 ## Evolução do Projeto
-~~~
-<Relate a evolução do projeto: possíveis problemas enfrentados e possíveis mudanças de trajetória. Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.>
-~~~
 
 ### Escolha de indicadores
 Inicialmente, o principal objetivo do trabalho era fazer uma análise comparativa de quatro indicadores entre municípios brasileiros, estados brasileiros e países em comparação com o Brasil. Os indicadores seriam: <b>médicos</b>; <b>enfermeiros</b>; <b>hospitais</b>; <b>leitos de UTI</b>. 
@@ -230,6 +221,9 @@ A discussão dos resultados também pode ser feita aqui na medida em que os resu
 
 Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser esquecidas; não invalida a análise, mas é importante deixar essas limitações claras (citar reportagem da nature q fala disso)
 ~~~
+## Melhores práticas
+
+## Panorama brasileiro
 
 # Conclusões
 ~~~
