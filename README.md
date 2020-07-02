@@ -282,7 +282,7 @@ A Figura 5 mostra a densidade de leitos de UTI COVID-19 em cada um dos municípi
 |:--:| 
 | Figura 5. Leitos de UTI COVID-19 a cada 10k habitantes, por município do estado de SP |
 
-É interessante destacar, também, a proporção de recursos disponíveis versus não disponíveis na rede pública. O gráfico da Figura 6 revela que há uma tendência de enfermeiros atuarem no SUS em maior proporção que os médicos, em todos os estados. Além disso, visualizamos que a Região Sudeste é a que tem maior proporção desses profissionais não atuando no SUS; na Região Norte, ocorre o oposto. 
+É interessante destacar, também, a proporção de recursos disponíveis versus não disponíveis na rede pública. O gráfico da Figura 6 revela que há uma tendência de enfermeiros atuarem no SUS em maior proporção que os médicos, em todas as regiões. Além disso, visualizamos que a Região Sudeste é a que tem maior proporção desses profissionais não atuando no SUS; na Região Norte, ocorre o oposto. 
 
 | <img src="/assets/gráficos/perc_enfmed_sus.png" width="700" height="455" /> | 
 |:--:| 
@@ -438,6 +438,12 @@ Em relação às visualizações, identificamos atributos que poderiam ser adici
 - Seria possível hospedar todas as visualizações contruídas em um mesmo servidor. Para tanto, algumas ideias são:
   - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram contruídas);
   - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in";
+  
+   <img src="/assets/mapas/gifs/Estados_dark_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Países_light_mode.gif" width="400" height="200" /> 
+ <img src="/assets/mapas/gifs/Municípios_light_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Municípios_dark_mode.gif" width="400" height="200" /> 
+ 
+ Figura 13. Exemplos de mapas de diferentes granularidades em modo claro e escuro. Também mostramos animações possíveis. 
+ 
   - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
 
 ## Indicadores e Análises
