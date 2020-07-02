@@ -334,53 +334,118 @@ Identificamos, também, que 46.1% dos municípios brasileiros não possuem hospi
 
 Abaixo, destacamos resultados curiosos gerados pelo código. Vale lembrar que existem mais que cinco municípios sem enfermeiros; o <i>script</i> simplesmente detectou os cinco primeiros dessa lista. 
 
-``Cinco municípios brasileiros com mais médicos a cada 10k habitantes:``
-``               Município  Médicos a cada 10k habitantes``
-``4768  Faxinal do Soturno                         319.01``
-``3422        Divinolândia                          86.13``
-``3352            Botucatu                          83.07``
-``3329            Barretos                          81.74``
-``4448             Joaçaba                          78.69``
+```
+Cinco municípios brasileiros com mais médicos a cada 10k habitantes:
+               Município  Médicos a cada 10k habitantes
+4768  Faxinal do Soturno                         319.01
+3422        Divinolândia                          86.13
+3352            Botucatu                          83.07
+3329            Barretos                          81.74
+4448             Joaçaba                          78.69
 
-``Cinco municípios brasileiros com menos enfermeiros:``
-``             Município  Enfermeiros - Total``
-``846   Santana do Piauí                    0``
-``850  São Braz do Piauí                    0``
-``867  São Luis do Piauí                    0``
-``886      Várzea Branca                    0``
-``888        Vera Mendes                    0``
+Cinco municípios brasileiros com menos enfermeiros:
+             Município  Enfermeiros - Total
+846   Santana do Piauí                    0
+850  São Braz do Piauí                    0
+867  São Luis do Piauí                    0
+886      Várzea Branca                    0
+888        Vera Mendes                    0
+``` 
 
 Por fim, calculamos, a partir dos dados município a município, os seguintes indicadores gerais do Brasil: 13.45 enfermeiros a cada 10 mil habitantes; 20.03 médicos a cada 10 mil habitantes; 3.3 hospitais a cada 100 mil habitantes.
 
 ### Posicionamento do Brasil em relação a referências externas
+Para analisar o posicionamento geral do Brasil, usamos duas referências: a densidade indicada pela [OMS](#melhores-práticas), de 44.5 médicos e enfermeiros a cada 10 mil habitantes, e dados de outros países, para compará-los. 
+
+A Figura 9 mostra, por estado, a quantidade de profissionais de saúde considerados que deveria ser agregada - ou retirada - do território para que se chegasse exatamente a essa densidade. (Lembramos que, segundo a própria instituição autora do índice recomendado, [tal valor não existe para que seja atingido a qualquer custo, e sim como uma referência apenas](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "WHO 2016").) Segundo esse critério, o único local no Brasil que atende a tal requisito é o Distrito Federal. 
+
 | <img src="/assets/gráficos/deficit_excesso.png" width="910" height="420" /> | 
 |:--:| 
-| Figura 3. Décific/excesso de profissionais por estado |
+| Figura 9. Décific/excesso de profissionais por estado |
+
+Os mapas com dados do mundo ajudam a entender como os indicadores do Brasil se comparam aos de outros países. As Figuras 10 e 11 mostram, respectivamente, a densidade de profissionais de enfermagem e médicos por país, com destaque para o Brasil. Segundo essas visualizações, não parecemos distantes das médias do continente americano e mundial. 
 
 | <img src="/assets/mapas/selecionados/mundo_enf.jpeg" width="700" height="420" /> | 
 |:--:| 
-| Figura 3. Densidade de profissionais de enfermagem no mundo, com destaque para o Brasil |
+| Figura 10. Densidade de profissionais de enfermagem no mundo, com destaque para o Brasil |
 
 | <img src="/assets/mapas/selecionados/mundo_med.jpeg" width="700" height="420" /> | 
 |:--:| 
-| Figura 3. Densidade de médicos no mundo, com destaque para o Brasil |
+| Figura 11. Densidade de médicos no mundo, com destaque para o Brasil |
+
+A visualização dos dados em boxplot permite fazer comparações mais precisas. Nos gráficos da Figura 12, que exibem a densidade dos profissionais considerados no mundo todo, a linha vermelha representa a posição do Brasil. Em comparação aos demais países, estamos bem posicionados no abastecimento de médicos e muito bem posicionados no abastecimento de profissionais de enfermagem. 
 
 | <img src="/assets/gráficos/boxplot_mundo.png" width="640" height="480" /> | 
 |:--:| 
-| Figura 3. Densidade de médicos e profissionais de enfermagem no mundo. A linha vermelha representa a posição do Brasil|
+| Figura 12. Densidade de médicos e profissionais de enfermagem no mundo. A linha vermelha representa a posição do Brasil|
 
+Abaixo, destacamos resultados curiosos gerados pelo código. 
 
-- Panorama da situação brasileira
-  - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
-  - Se há desigualdade na distribuição desses recursos no país, qual é sua magnitude e quais são os lugares mais afetados por ela? 
-  - Como o Brasil se compara com o resto do mundo na disponibilidade de médicos e enfermeiros à população?
-~~~
-<Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
+```
+Países com mais profissionais de enfermagem:
+                         País  Profissionais de enfermagem - Total
+185  United States of America                              4729338
+35                      China                              3804021
+78                      India                              2336204
+23                     Brazil                              2119620
+86                      Japan                              1545907
 
-A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?>
+Países com menos profissionais de enfermagem:
+             País  Profissionais de enfermagem - Total
+126          Niue                                   20
+179        Tuvalu                                   49
+119         Nauru                                   82
+39   Cook Islands                                  118
+30       Cameroon                                  127
 
-Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser esquecidas; não invalida a análise, mas é importante deixar essas limitações claras (citar reportagem da nature q fala disso)
-~~~
+Países com mais profissionais de enfermagem a cada 10k habitantes:
+            País  Profissionais de enfermagem a cada 10k habitantes
+112       Monaco                                             201.61
+16       Belgium                                             194.61
+127       Norway                                             182.25
+168  Switzerland                                             175.36
+77       Iceland                                             162.13
+
+Países com menos profissionais de enfermagem a cada 10k habitantes:
+           País  Profissionais de enfermagem a cada 10k habitantes
+30     Cameroon                                               0.06
+70    Guatemala                                               0.74
+161     Somalia                                               1.12
+71       Guinea                                               1.24
+101  Madagascar                                               1.46
+
+Países com mais médicos:
+                         País  Médicos - Total
+35                      China          2828999
+78                      India          1159309
+185  United States of America           849126
+144        Russian Federation           543604
+23                     Brazil           453351
+
+Países com menos médicos:
+                                 País  Médicos - Total
+126                              Niue                3
+151             Sao Tome and Principe               11
+119                             Nauru               14
+111  Micronesia (Federated States of)               20
+90                           Kiribati               22
+
+Países com mais médicos a cada 10k habitantes:
+           País  Médicos a cada 10k habitantes
+42         Cuba                          84.22
+112      Monaco                          75.07
+65      Georgia                          71.20
+99    Lithuania                          63.53
+150  San Marino                          61.09
+
+Países com menos médicos a cada 10k habitantes:
+                            País  Médicos a cada 10k habitantes
+184  United Republic of Tanzania                           0.14
+161                      Somalia                           0.23
+156                 Sierra Leone                           0.25
+102                       Malawi                           0.36
+97                       Liberia                           0.38
+```
 
 # Conclusões
 ~~~
