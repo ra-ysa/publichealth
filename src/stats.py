@@ -117,7 +117,7 @@ def stats_estados(dataset_uf_reg):
 	ax.set_title("%" + " de médicos e enfermeiros que atendem no SUS por região, em relação ao total de sua categoria")
 	ax.set_ylabel("%")
 	plt.legend(loc="lower right")
-	plt.savefig("../assets/gráficos/%_enfmed_sus.png")
+	plt.savefig("../assets/gráficos/perc_enfmed_sus.png")
 
 	# plota % de hospitais públicos por região
 	x = dataset_reg["Região ou UF"]
@@ -130,7 +130,7 @@ def stats_estados(dataset_uf_reg):
 	fig.autofmt_xdate()
 	ax.set_title("%" + " de hospitais públicos por região")
 	ax.set_ylabel("%")
-	plt.savefig("../assets/gráficos/%_hosp_publ.png")
+	plt.savefig("../assets/gráficos/perc_hosp_publ.png")
 
 	# plota excesso/deficit de profissionais de saude por estado
 	dataset_uf.sort_values("Déficit ou excesso de médicos/enfermeiros", inplace=True)
@@ -163,7 +163,7 @@ def stats_estados(dataset_uf_reg):
 				'Leitos UTI': leitos_uti,
 				'Leitos UTI Covid-19': leitos_covid}
 	barh_discrete(resultados, categorias)
-	plt.savefig("../assets/gráficos/%_recursos_geral.png")
+	plt.savefig("../assets/gráficos/perc_recursos_geral.png")
 
 def stats_paises(dataset_paises):
 	print(recurso_nmax(5, "Profissionais de enfermagem - Total", "País", dataset_paises))
