@@ -126,7 +126,7 @@ def boxplot_densidades_paises(dataset):
 def stats_municipios(dataset_mun):
 	print("Cinco municípios brasileiros com mais médicos a cada 10k habitantes:")
 	print(recurso_nmax(5, "Médicos a cada 10k habitantes", "Município", dataset_mun))
-	print("Cinco municípios brasileiros com menos enfermeiros (desconsiderando zero):")
+	print("Cinco municípios brasileiros com menos enfermeiros:")
 	print(recurso_nmin(5, "Enfermeiros - Total", "Município", dataset_mun))
 	print("Porcentagem de municípios brasileiros sem hospitais:")
 	print(percent_zero(dataset_mun, "Hospitais - Total"))
@@ -149,6 +149,7 @@ def stats_estados(dataset_uf_reg):
 					24, 25, 26,
 					28, 29, 30, 31], :]
 
+	# plota boxplot 
 	boxplot_densidades(dataset_uf)
 
 	# plota % de enfermeiros e medicos sus vs regiao
@@ -230,5 +231,5 @@ def stats_paises(dataset_paises):
 	print("Países com menos médicos a cada 10k habitantes:")
 	print(recurso_nmin(5, "Médicos a cada 10k habitantes", "País", dataset_paises))
 
-	# plota boxplots
+	# plota boxplot
 	boxplot_densidades_paises(dataset_paises)
