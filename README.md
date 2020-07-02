@@ -5,24 +5,7 @@
 Pensar em soluções na área da saúde passa por pensar em saúde pública: a saúde individual não é descolada da saúde coletiva. A formulação, implementação e avaliação de políticas públicas em saúde permite que intervenções sejam adequadas e tragam maior benefício para a população; um desenho adequado dessas políticas, por sua vez, exige extração e compreensão de indicadores pertinentes, processo que pode ser enriquecido, também, por visualizações apropriadas. Neste trabalho, buscamos compreender a oferta, no Brasil, de recursos essenciais em saúde selecionados, de modo a construir um panorama do país na área. Para tanto, selecionamos bancos pertinentes e realizamos análise de dados baseada em estudo bibliográfico, análise exploratória de dados, estatística descritiva e geração de visualizações. Identificamos métricas importantes sobre a distribuição de determinados recursos de saúde no Brasil e no mundo, que podem informar análises futuras e/ou políticas públicas em saúde. 
 
 ## Abstract
-Is very difficult to find a pleasent, clean and simple visualization of brazilian public health data.
-Thinking about it, we decided to look for some data, such as:
-
-- Number of public and non-public hospitals by state, municipality and Brazilian region
-- Number of SUS nurses or not by state, municipality and Brazilian region
-- Number of SUS doctors or not by state, municipality and Brazilian region
-- Number of SUS hospitalization beds or not by state, municipality and Brazilian region
-- Number of SUS ICU beds or not by state, municipality and Brazilian region
-- Nurses for every 10k inhabitants by state, municipality and Brazilian region
-- Doctors for every 10k inhabitants by state, municipality and Brazilian region
-- Hospitals per 100k inhabitants per state, municipality and Brazilian region
-- Beds (hospitalization) for every 10k inhabitants by state, municipality and Brazilian region
-- ICU beds for every 10k inhabitants by state, municipality and Brazilian region
-
-With the data in hand, we created visualizations using * Choropleth maps* to be able to compare, through colors, the densities of hospitals, doctors, nurses, beds and hospitals between different municipalities, states and Brazilian regions.
-In addition, we also obtained data of quantity and density of doctors and nurses per 100k inhabitants for different countries, making it possible to create a macro view.
-
-Finally, using these visualizations, we made some statistical analysis.
+Traduzir
 
 # Equipe
 * Deborah Sadetsky - 150912
