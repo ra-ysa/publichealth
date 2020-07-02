@@ -249,9 +249,9 @@ Diante dessas ponderações, optamos por por limitar a análise desses indicador
 ### Dificuldades e limitações
 Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades emergiram e algumas limitações se revelaram. Destacamo-las abaixo.
 
-- <b>Pré-processamento e limpeza de dados</b>: Não houve dificuldades de processamento computacional, considerando que o tamanho dos dados era adequado para as máquinas utilizadas; houve, contudo, algumas dificuldades algorítmicas para efetuar o pré-processamento/limpeza adequadamente. Deixar os dados em um formato amigável para sua utilização na geração de visualizações e análises estatísticas exigiu concatená-los, em cada uma das granularidades (municipal, estadual e nacional), de modo que fizesse sentido; isso exigiu a escolha de atributos pertinentes e a adequação de diversas tabelas, além de processos tradicionais de limpeza (exclusão de linhas, remoção ou edição de caracteres inválidos, adaptações de tipos de variáveis, tratamento de casos especiais etc.). Tais dificuldades foram superadas com persistência e estudo das ferramentas, além de readequação do projeto quando necessário, conforme descrito nesta seção. A atividade de pré-processamento/limpeza foi, provavelmente, a que mais demandou tempo e trabalho do grupo;
+- <b>Pré-processamento e limpeza de dados</b>: Não houve dificuldades de processamento computacional, considerando que o tamanho dos dados era apropriado para as máquinas utilizadas; houve, contudo, algumas dificuldades algorítmicas para efetuar o pré-processamento/limpeza adequadamente. Deixar os dados em um formato amigável para sua utilização na geração de visualizações e análises estatísticas exigiu concatená-los, em cada uma das granularidades (municipal, estadual e nacional), de modo que fizesse sentido; isso exigiu a escolha de atributos pertinentes e a adequação de diversas tabelas, além de processos tradicionais de limpeza (exclusão de linhas, remoção ou edição de caracteres inválidos, adaptações de tipos de variáveis, tratamento de casos especiais etc.). Tais dificuldades foram superadas com persistência e estudo das ferramentas, além de readequação do projeto quando necessário, conforme descrito nesta seção. A atividade de pré-processamento/limpeza foi, provavelmente, a que mais demandou tempo e trabalho do grupo;
 
-- <b>Geração de visualizaçeõs</b>: 
+- <b>Geração de visualizações</b>: 
   - Houve dificuldade para encontrar os perímetros dos municípios e dos estados no formato necessário para utilização da biblioteca [Choropleth](https://plotly.com/python/choropleth-maps/ "Choropleth");
   - Existiam várias divergências entre os nomes dos municípios e dos países presentes nos dois arquivos utilizados na plotagem dos mapas (banco de dados e .json ou arquivo dos códigos dos países). Devido a essas divergências, uma análise minuciosa foi feita para padronização dos nomes e acabamos descobrindo algumas curiosidades sobre os nomes dos municípios brasileiros (estão descritas nos [notebooks de visualização](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks"));
   - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar gráficos pouco poluído (cores utilizadas, disponibilização das informações, tamanho da imagem e da fonte etc.);
@@ -332,7 +332,7 @@ A Figura 8 traz distribuições, visualizadas em boxplot, para a densidade de ca
 
 Identificamos, também, que 46.1% dos municípios brasileiros não possuem hospitais; esse dado, contudo, deve ser analisado com cuidado, tendo em vista que a ausência de hospitais em um município não implica a ausência de hospitais a uma distância aceitável, em cidades próximas maiores. [Trabalhos futuros](#indicadores-e-análises) poderiam incluir, por exemplo, a verificação de quantos são os municípios nesse grupo que possuem menos de 10 mil habitantes. 
 
-Abaixo, destacamos resultados curiosos gerados pelo código. Vale lembrar que existem mais que cinco municípios sem enfermeiros; o <i>script</i> simplesmente detectou os cinco primeiros dessa lista. 
+Abaixo, destacamos resultados curiosos gerados pelo código. Lembramos que existem mais de cinco municípios sem enfermeiros; o <i>script</i> simplesmente detectou os cinco primeiros desse conjunto. 
 
 ```
 Cinco municípios brasileiros com mais médicos a cada 10k habitantes:
@@ -448,13 +448,13 @@ Países com menos médicos a cada 10k habitantes:
 ```
 
 # Conclusões
-~~~
-<Apresente aqui as conclusões finais do trabalho e as lições aprendidas.>
-~~~
-- processamento leva mais tempo que o esperado
-- fazer boas visualizaçoes nao eh trivial
-- apesar dos probleminhas, datasus eh uma plataforma mto massa (referenciar relatorio)
-- o ideal pra informar politicas publicas eh evidencias (que vêm de dados) + conhecimento do domínio. dados sozinhos, sem que a gt saiba o que queremos deles, nao dizem mta coisa
+A análise conduzida neste trabalho não é, de forma alguma, exaustiva; com os dados aqui selecionados e pré-processados, muitas outras métricas poderiam ser extraídas, e dados adicionais trariam possibilidades de análise infinitas. Acreditamos, contudo, que os resultados expostos são relevantes e agregam conhecimento - ou, no mínimo, ajudam a posicionar um ponto de partida - sobre o panorama de indicadores importantes de saúde pública no Brasil. 
+
+A formulação, implementação e avaliação de políticas públicas é enriquecida quando baseada em evidências; estamos convencidas de que uma análise de dados apropriada é uma ferramenta poderosa para coletar essas evidências e interpretá-las adequadamente. Destacamos, porém, que obter dados não é suficiente; uma boa análise compreende estudo do problema, estudo da literatura pertinente, conhecimento do domínio, uso adequado e ético das ferramentas e definição de objetivos. Neste trabalho, ter uma pergunta de pesquisa sobre a qual nos guiar foi essencial.
+
+Do ponto de vista técnico, conseguimos superar boa parte das dificuldades que surgiram - ou readequar o projeto quando isso não foi possível. A etapa de pré-processamento/limpeza dos dados foi, provavelmente, a que mais tomou tempo e trabalho do grupo; em projetos futuros, certamente não subestimaremos o tempo necessário para dedicar a essa atividade. Além disso, as visualizações, aliadas importantíssimas do processo, não devem ser negligenciadas: apesar da grande disponibilidade de ferramentas para construí-las, definir os parâmetros de uma boa visualização não é trivial, em especial quando não se tem noções de design.
+
+Em relação aos resultados, confirmamos a hipótese sobre a desigualdade interna que existe no Brasil quando se trata de assistência a saúde; porém, essa desigualdade se manifesta de diferentes maneiras, e entendê-las é importante para desenhar intervenções apropriadas. Além disso, observamos que, apesar de apresentar alguns problemas, a plataforma Tabnet/Datasus é rica, relativamente fácil de usar e segue a muitas das [recomendações de boas práticas](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "WHO, 2016") para construção de bancos de dados sobre saúde pública, podendo ser uma grande aliada para informar análises na área.
 
 # Trabalhos Futuros
 A partir dos dados processados neste trabalho, obtivemos estatísticas e geramos visualizações com informações úteis para entender o panorama de alguns indicadores de saúde pública no Brasil. Contudo, a quantidade de análises que podem ser feitas, informação que pode ser obtida e produtos que podem ser gerados usando os mesmos dados é imensa. Além disso, outros dados podem ser obtidos e informar novas análises em combinação com esta. Nesta seção, destacamos algumas possibilidades para trabalhos futuros.
