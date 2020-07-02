@@ -148,8 +148,66 @@ A seleção de bases partiu de um [conjunto inicial](#seleção-de-dados) que fo
 A seleção final é aquela que se encontra na seção [<b>Bases de Dados</b>](#bases-de-dados).
 
 ### 2. Seleção de atributos de interesse e pré-processamento/limpeza
+Com os dados em mãos, passamos à seleção de quais atributos seriam extraídos de cada um. Definimos três conjuntos de atributos:
+
+<b>1) Municípios:</b>
+
+- Código municipal;
+- Nome; 
+- População estimada em 2019 (IBGE);
+- UF correspondente;
+- Quantidade de enfermeiros que atendem no SUS;
+- Quantidade de enfermeiros que não atendem no SUS;
+- Quantidade total de enfermeiros;
+- Porcentagem de enfermeiros que atendem no SUS em relação ao total de enfermeiros;
+- Enfermeiros a cada 10.000 habitantes;
+- Quantidade de médicos que atendem no SUS;
+- Quantidade de médicos que não atendem no SUS;
+- Quantidade total de médicos;
+- Porcentagem de médicos que atendem no SUS em relação ao total de médicos;
+- Médicos a cada 10.000 habitantes;
+- Déficit ou excesso absoluto de médicos/enfermeiros*;
+- Quantidade de hospitais públicos;
+- Quantidade de hospitais não-públicos;
+- Quantidade total de hospitais; 
+- Porcentagem de hospitais públicos em relação ao total de hospitais;
+- Hospitais a cada 100.000 habitantes;
+- Quantidade de leitos de internação SUS;
+- Quantidade de leitos de internação não-SUS;
+- Quantidade total de leitos de internação;
+- Porcentagem de leitos de internação SUS em relação ao total de leitos dessa natureza;
+- Leitos de internação a cada 10.000 habitantes;
+- Quantidade de leitos complementares (isto é, de cuidado intensivo/UTI ou intermediário/UCI) SUS;
+- Quantidade de leitos complementares não-SUS;
+- Quantidade total de leitos complementares;
+- Porcentagem de leitos complementares SUS em relação ao total de leitos dessa natureza;
+- Leitos complementares a cada 10.000 habitantes;
+- Quantidade de leitos de UTI dedicados a COVID-19 SUS;
+- Quantidade de leitos de UTI dedicados a COVID-19 não-SUS;
+- Quantidade total de leitos de UTI dedicados a COVID-19;
+- Porcentagem de leitos de UTI dedicados a COVID-19 SUS em relação ao total de leitos dessa natureza;
+- Leitos de UTI dedicados a COVID-19 a cada 10.000 habitantes.
+
+* Esse atributo corresponde à quantidade faltante - ou extra - de profissionais (médicos e enfermeiros) em relação a um valor de referência para a região selecionada. Segundo [relatório da OMS](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "OMS, 2016") (2016), seriam necessários 44.5 médicos e enfermeiros/obstetrizes (somados) a cada 10.000 habitantes para garantir cobertura de saúde adequada em uma população. Embora arbitrário em algum grau, esse valor representa uma referência útil para entender o posicionamento de uma região de interesse - no nosso caso, o Brasil - em relação ao que é estabelecido como padrão internacional. [Aqui](#melhores-práticas), explicamos como esse número é obtido e algumas de suas limitações; maiores detalhes podem ser compreendidos pela leitura do relatório.
+
+<b>2) Estados:</b>
+
+Conjunto idêntico ao de atributos para os municípios (exceto pelo código municipal e UF correspondente).
+
+<b>3) Países:</b>
+
+- Nome;
+- Quantidade total de profissionais de enfermagem;
+- Profissionais de enfermagem a cada 10.000 habitantes;
+- Quantidade total de médicos;
+- Médicos a cada 10.000 habitantes. 
+
+Para cada um desses conjuntos, os dados originais foram pré-processados e limpos de modo que uma nova tabela, com os atributos descritos acima, foi gerada, pronta para ser usada nas análises de interesse. O processo resultou, assim, em três [tabelas](https://github.com/ra-ysa/publichealth/tree/master/data/processed "Dados processados"): ``Brasil - Municípios.csv``, ``
+Brasil - UFs e Regiões.csv `` e ``Mundo (OMS).csv``. 
 
 ### 3. Geração de visualizações
+
+- <b>Mapas</b>: Os mapas foram [gerados](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks") usando Jupyter Notebook, a partir de dados processados por [município](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_municipios_por_estado "Dados municipais por estado"), [estado](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_estado "Dados estaduais"), [região](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_regiao "Dados regionais") e [país](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_pais "Dados mundiais"). 
 
 ### 4. Definição e realização de análises estatísticas pertinentes
 
@@ -159,6 +217,7 @@ A seleção final é aquela que se encontra na seção [<b>Bases de Dados</b>](#
 Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
 
 ## Evolução do Projeto
+Nesta seção, apresentamos aspectos do trabalho que passaram por mudanças significativas. 
 
 ### Seleção de dados
 Inicialmente, o conjunto de dados escolhidos para basear a análise era composto pelos seguintes datasets:
