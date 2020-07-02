@@ -250,7 +250,7 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 
 ## Panorama brasileiro
 ### Distribuição de recursos de saúde no Brasil
-A variedade de atributos escolhidos para extrair dos dados originais permite uma infinidade de abordagens para olhar a questão da distribuição de recursos de saúde no brasil. Nesta seção, destacamos, a partir das visualizações e resultados gerados pelo código, algumas das que nos pareceram mais interessantes. 
+A variedade de atributos escolhidos para extrair dos dados originais permite uma infinidade de abordagens para olhar a questão da distribuição de recursos de saúde no Brasil. Nesta seção, destacamos, a partir das visualizações e resultados gerados pelo código, algumas das que nos pareceram mais interessantes. 
 
 A Figura 1 ilustra, de maneira panorâmica, a distribuição percentual de cada recurso de interesse (em quantidades absolutas) por região. Ou seja: a Região Norte, por exemplo, abriga 8% da população do Brasil, 4% de seus médicos e 7% de seus leitos tipo internação.
 
