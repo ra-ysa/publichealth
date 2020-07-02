@@ -330,25 +330,25 @@ A Figura 8 traz distribuições, visualizadas em boxplot, para a densidade de ca
 |:--:| 
 | Figura 8. Densidade de cada recurso de interesse no Brasil, a partir dos dados estaduais |
 
-Identificamos, também, que 46.1% dos municípios brasileiros não possuem hospitais; esse dado, contudo, deve ser analisado com cuidado, tendo em vista que a ausência de hospitais em um município não implica a ausência de hospitais a uma distância aceitável. [Trabalhos futuros](#indicadores-e-análises) poderiam incluir, por exemplo, a verificação de quantos são os municípios nesse grupo que possuem menos de 10 mil habitantes. 
+Identificamos, também, que 46.1% dos municípios brasileiros não possuem hospitais; esse dado, contudo, deve ser analisado com cuidado, tendo em vista que a ausência de hospitais em um município não implica a ausência de hospitais a uma distância aceitável, em cidades próximas maiores. [Trabalhos futuros](#indicadores-e-análises) poderiam incluir, por exemplo, a verificação de quantos são os municípios nesse grupo que possuem menos de 10 mil habitantes. 
 
 Abaixo, destacamos resultados curiosos gerados pelo código. Vale lembrar que existem mais que cinco municípios sem enfermeiros; o <i>script</i> simplesmente detectou os cinco primeiros dessa lista. 
 
-``Cinco municípios brasileiros com mais médicos a cada 10k habitantes:
-               Município  Médicos a cada 10k habitantes
-4768  Faxinal do Soturno                         319.01
-3422        Divinolândia                          86.13
-3352            Botucatu                          83.07
-3329            Barretos                          81.74
-4448             Joaçaba                          78.69``
+``Cinco municípios brasileiros com mais médicos a cada 10k habitantes:``
+``               Município  Médicos a cada 10k habitantes``
+``4768  Faxinal do Soturno                         319.01``
+``3422        Divinolândia                          86.13``
+``3352            Botucatu                          83.07``
+``3329            Barretos                          81.74``
+``4448             Joaçaba                          78.69``
 
-``Cinco municípios brasileiros com menos enfermeiros:
-             Município  Enfermeiros - Total
-846   Santana do Piauí                    0
-850  São Braz do Piauí                    0
-867  São Luis do Piauí                    0
-886      Várzea Branca                    0
-888        Vera Mendes                    0``
+``Cinco municípios brasileiros com menos enfermeiros:``
+``             Município  Enfermeiros - Total``
+``846   Santana do Piauí                    0``
+``850  São Braz do Piauí                    0``
+``867  São Luis do Piauí                    0``
+``886      Várzea Branca                    0``
+``888        Vera Mendes                    0``
 
 Por fim, calculamos, a partir dos dados município a município, os seguintes indicadores gerais do Brasil: 13.45 enfermeiros a cada 10 mil habitantes; 20.03 médicos a cada 10 mil habitantes; 3.3 hospitais a cada 100 mil habitantes.
 
