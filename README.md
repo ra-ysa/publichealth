@@ -256,26 +256,15 @@ Em relação às visualizações, identificamos atributos que poderiam ser adici
 ## Indicadores e Análises
 Para além do que já foi extraído neste trabalho, sugerimos alguns indicadores e análises que poderiam ser estudados em trabalhos futuros - alguns dos quais, inclusive, podem ser levantados a partir do próprio código do projeto, com poucas adaptações:
 - Indicadores hospitalares
-  - bla
+  - Discriminar, com mais detalhes, cada um dos grupos de leitos hospitalares;
+  - Incluir outros estabelecimentos de saúde para efetuar comparações;
 - Indicadores de recursos humanos
   - Enriquecer o estudo de diferenças entre médicos e enfermeiros (por exemplo, diferença na % de cada categoria que atende pelo SUS) com testes de hipóteses;
   - Acrescentar demais profissionais de saúde na análise;
   - Estudar as proporções entre profissionais de saúde (por exemplo, enfermeiros:médicos);
 - Todos os indicadores
   - Aumentar ou mudar a granularidade das análises - identificando, por exemplo, como um (ou mais) município(s) de interesse se posiciona(m) em relação à média do estado, do país, da região e do mundo, dentre outras combinações possíveis;
+  - Enriquecer algumas das comparações com testes de hipóteses; 
 - Outros indicadores (sugestões)
-  - Indicadores sociodemográficos - por exemplo, raciais, de renda ou de gênero - podem ser combinados a indicadores de saúde, com o objetivo de verificar a existência de correlações relevantes (ainda que não haja relação automática de causalidade a partir de uma correlação, isso pode indicar um caminho interessante para o qual olhar e, aliado a conhecimento do domínio, fortalecer ou rejeitar hipóteses de causalidade); 
-  - Indicadores detalhados sobre quais parcelas da população usam diferentes tipos de prestadores (ex: pessoas que usam exclusivamente o SUS, pessoas que têm convênios de saúde etc.).
-  
-<Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.>
-Rascunho:
-HOSPITAIS
-quantos 
-% dos municípios não têm hospital at all e onde eles se concentram
-% de públicos e privados em cada município/estado
-LEITOS UTI
-quantos % são leitos covid - país, estado e municípios
-Quais municípios/estados têm maior % de leitos covid
-quantos % dos municípios não têm UTI at all e onde eles se concentram
-(Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
-
+  - Indicadores sociodemográficos - por exemplo, raciais, de renda ou de gênero - podem ser combinados a indicadores de saúde, com o objetivo de verificar a existência de correlações relevantes (ainda que não haja relação automática de causalidade a partir de uma correlação, esta pode indicar um caminho interessante para o qual olhar e, aliada a conhecimento do domínio, fortalecer ou rejeitar hipóteses de causalidade); 
+  - Podem ser incluídos indicadores detalhados sobre quais parcelas da população usam diferentes tipos de prestadores (ex: pessoas que usam exclusivamente o SUS, pessoas que têm convênios de saúde etc.).
