@@ -436,7 +436,7 @@ A partir dos dados processados neste trabalho, obtivemos estatísticas e geramos
 ## Visualizações
 Em relação às visualizações, identificamos atributos que poderiam ser adicionados ou melhorados em trabalhos futuros, em relação àquelas que produzimos aqui:
 - Seria possível hospedar todas as visualizações contruídas em um mesmo servidor. Para tanto, algumas ideias são:
-  - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram contruídas);
+  - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram construídas);
   - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in"; 
   - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
   
