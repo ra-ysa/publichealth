@@ -85,6 +85,7 @@ def densidade_geral(dataset, recurso):
 
 # plota boxplots de densidades de recursos para um dataset
 def boxplot_densidades(dataset):
+	# todas as colunas referentes a densidades
     dataset = dataset[[s for s in dataset.columns if "habitantes" in s]]
 
     sns.set(rc={'figure.figsize':(40,8.27)})
@@ -94,6 +95,7 @@ def boxplot_densidades(dataset):
     bx.tick_params(labelsize=15)
     bx.axes.set_title("Densidades de cada recurso no Brasil", fontsize=20)
     bx.get_figure().savefig("../assets/gráficos/boxplot_brasil.png")
+    sns.reset_orig()
 
 # plota boxplots para os dados mundiais
 def boxplot_densidades_paises(dataset):
@@ -147,7 +149,6 @@ def stats_estados(dataset_uf_reg):
 					24, 25, 26,
 					28, 29, 30, 31], :]
 
-	# plota boxplots
 	boxplot_densidades(dataset_uf)
 
 	# plota % de enfermeiros e medicos sus vs regiao
@@ -158,7 +159,6 @@ def stats_estados(dataset_uf_reg):
 	fig, ax = plt.subplots(figsize=(10, 6.5))
 	ax.scatter(x, y1, linewidth=2, label="Enfermeiros")
 	ax.scatter(x, y2, linewidth=2, label="Médicos")
-		
 	ax.set_ylim(bottom=0, top=100)
 	fig.autofmt_xdate()
 	ax.set_title("%" + " de médicos e enfermeiros que atendem no SUS por região, em relação ao total de sua categoria")
