@@ -368,6 +368,7 @@ Para além do que já foi extraído neste trabalho, sugerimos alguns indicadores
 - Indicadores hospitalares
   - Discriminar, com mais detalhes, cada um dos grupos de leitos hospitalares;
   - Incluir outros estabelecimentos de saúde para efetuar comparações;
+  - Verificar proporção de municípios pouco populosos dentre aqueles que não têm hospitais e/ou leitos;
 - Indicadores de recursos humanos
   - Enriquecer o estudo de diferenças entre médicos e enfermeiros (por exemplo, diferença na % de cada categoria que atende pelo SUS) com testes de hipóteses;
   - Acrescentar demais profissionais de saúde na análise;
