@@ -190,7 +190,7 @@ Com os dados em mãos, passamos à seleção de quais atributos seriam extraído
 
 \* Esse atributo corresponde à quantidade faltante - ou extra - de profissionais (médicos e enfermeiros) em relação a um valor de referência para a região selecionada. Segundo [relatório da OMS](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "OMS, 2016") (2016), seriam necessários 44.5 médicos e enfermeiros/obstetrizes (somados) a cada 10.000 habitantes para garantir cobertura de saúde adequada em uma população. Embora arbitrário em algum grau, esse valor representa uma referência útil para entender o posicionamento de uma região de interesse - no nosso caso, o Brasil - em relação ao que é estabelecido como padrão internacional. [Aqui](#melhores-práticas), explicamos como esse número é obtido e algumas de suas limitações; maiores detalhes podem ser compreendidos pela leitura do relatório.
 
-<b>2) Estados</b>:
+<b>2) Estados e Regiões</b>:
 
 Conjunto idêntico ao de atributos para os municípios (exceto pelo código municipal e UF correspondente).
 
@@ -202,8 +202,7 @@ Conjunto idêntico ao de atributos para os municípios (exceto pelo código muni
 - Quantidade total de médicos;
 - Médicos a cada 10.000 habitantes. 
 
-Para cada um desses conjuntos, os dados originais foram pré-processados e limpos de modo que uma nova tabela, com os atributos descritos acima, foi gerada, pronta para ser usada nas análises de interesse. O processo resultou, assim, em três [tabelas](https://github.com/ra-ysa/publichealth/tree/master/data/processed "Dados processados"): ``Brasil - Municípios.csv``, ``
-Brasil - UFs e Regiões.csv `` e ``Mundo (OMS).csv``. 
+Para cada um desses conjuntos, os dados originais foram pré-processados e limpos de modo que uma nova tabela, com os atributos descritos acima, foi gerada, pronta para ser usada nas análises de interesse. O processo resultou, assim, em três [tabelas](https://github.com/ra-ysa/publichealth/tree/master/data/processed "Dados processados"): ``Brasil - Municípios.csv``, ``Brasil - UFs e Regiões.csv `` e ``Mundo (OMS).csv``. 
 
 ### 3. Geração de visualizações
 
