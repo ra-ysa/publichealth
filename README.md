@@ -437,14 +437,13 @@ A partir dos dados processados neste trabalho, obtivemos estatísticas e geramos
 Em relação às visualizações, identificamos atributos que poderiam ser adicionados ou melhorados em trabalhos futuros, em relação àquelas que produzimos aqui:
 - Seria possível hospedar todas as visualizações contruídas em um mesmo servidor. Para tanto, algumas ideias são:
   - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram contruídas);
-  - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in";
+  - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in"; 
+  - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
   
-   <img src="/assets/mapas/gifs/Estados_dark_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Países_light_mode.gif" width="400" height="200" /> 
+     <img src="/assets/mapas/gifs/Estados_dark_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Países_light_mode.gif" width="400" height="200" /> 
  <img src="/assets/mapas/gifs/Municípios_light_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Municípios_dark_mode.gif" width="400" height="200" /> 
  
- Figura 13. Exemplos de mapas de diferentes granularidades em modo claro e escuro. Também mostramos animações possíveis. 
- 
-  - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
+ Figura 13. Exemplos de mapas de diferentes granularidades em modos claro e escuro. Também mostramos animações possíveis. 
 
 ## Indicadores e Análises
 Para além do que já foi extraído neste trabalho, sugerimos alguns indicadores e análises que poderiam ser estudados em trabalhos futuros - alguns dos quais, inclusive, podem ser levantados a partir do próprio código do projeto, com poucas adaptações:
