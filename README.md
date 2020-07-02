@@ -322,7 +322,7 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 |:--:| 
 | Figura 3. Leitos de internação a cada 10k habitantes, por região |
 
-| <img src="/assets/gráficos/boxplot_brasil.png" width="2400" height="496" /> | 
+| <img src="/assets/gráficos/boxplot_brasil.png" width="3200" height="280" /> | 
 |:--:| 
 | Figura 3. Densidade de cada recurso de interesse no Brasil, a partir dos dados estaduais |
 
@@ -339,7 +339,7 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 |:--:| 
 | Figura 3. Densidade de médicos no mundo, com destaque para o Brasil |
 
-| <img src="/assets/gráficos/boxplot_mundo.png" width="2400" height="496" /> | 
+| <img src="/assets/gráficos/boxplot_mundo.png" width="640" height="480" /> | 
 |:--:| 
 | Figura 3. Densidade de médicos e profissionais de enfermagem no mundo. A linha vermelha representa a posição do Brasil|
 
