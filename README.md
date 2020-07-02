@@ -463,8 +463,8 @@ Em relação às visualizações, identificamos atributos que poderiam ser adici
   - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
   
   
-     <img src="/assets/mapas/gifs/Estados_dark_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Países_light_mode.gif" width="400" height="200" /> 
- <img src="/assets/mapas/gifs/Municípios_light_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Municípios_dark_mode.gif" width="400" height="200" /> 
+     <img src="/assets/mapas/gifs/Estados_dark_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Países_light_mode.gif" width="300" height="200" /> 
+ <img src="/assets/mapas/gifs/Municípios_light_mode.gif" width="300" height="200" /> | <img src="/assets/mapas/gifs/Municípios_dark_mode.gif" width="300" height="200" /> 
  
  Figura 13. Exemplos de mapas de diferentes granularidades em modos claro e escuro. Também mostramos animações possíveis. 
 
