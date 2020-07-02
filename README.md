@@ -2,7 +2,6 @@
 ## Data science and visualization in Public Health: an overview of indicators in Brazil
 
 # Resumo
-
 Existe uma dificuldade grande de encontrar dados de saúde pública brasileira que tenham uma visualização agradável e simples para o usuário.
 Pensando nisso, decidimos buscar alguns dados, como:
 
@@ -24,7 +23,6 @@ Por fim, fizemos algumas análises estatísticas com o auxílio dessas visualiza
 
 
 # Abstract
-
 Is very difficult to find a pleasent, clean and simple visualization of brazilian public health data.
 Thinking about it, we decided to look for some data, such as:
 
@@ -57,27 +55,6 @@ O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqu
 ~~~
 
 ## Perguntas de Pesquisa
-~~~
-<Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.>
-Rascunho:
-HOSPITAIS
-quantos % dos municípios não têm hospital at all e onde eles se concentram
-% de públicos e privados em cada município/estado
-LEITOS UTI
-quantos % são leitos covid - país, estado e municípios
-Quais municípios/estados têm maior % de leitos covid
-quantos % dos municípios não têm UTI at all e onde eles se concentram
-(Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
-MÉDICOS/ENFERMEIROS
-quantos % atendem no sus - país, estado e municípios
-Quais municípios/estados têm maior % de profissionais que não atendem sus
-Razão medico:enf? Dfça entre quantos estao no sus?
-TODOS
-Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
-como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
-como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
-(Ver se rola: correlação com indicadores raciais? % da pop que usa o SUS/não tem plano de saúde?)
-~~~
 O trabalho foi guiado tendo como principal pergunta de pesquisa: <b>no contexto de avaliação de adequação da oferta de recursos essenciais em saúde pública, quão próximos estamos, no Brasil, das melhores práticas?</b>
 Essa pergunta se desdobra nas seguintes questões específicas:
 - Identificação das melhores práticas
@@ -88,7 +65,6 @@ Essa pergunta se desdobra nas seguintes questões específicas:
   - Como o Brasil se compara com o resto do mundo na disponibilidade de médicos e enfermeiros à população?
 
 ## Objetivos do projeto
-
 Além do objetivo principal de responder às perguntas de pesquisa, o trabalho se desdobra nos seguintes objetivos específicos: trazer opções para visualizar grandes quantidades de dados de saúde pública, de forma simples e didática; realizar análises estatísticas descritivas a partir dos dados coletados; criar visualizações dessas análises.
 
 # Recursos e Métodos
@@ -139,7 +115,6 @@ Matplotlib | https://matplotlib.org/ | Biblioteca de visualização, usada para 
 NumPy | https://numpy.org/ | Biblioteca de computação científica, usada para auxiliar nas tarefas de visualização performadas em linguagem Python.
 
 # Metodologia
-
 A metodologia adotada no trabalho baseou-se nas seguintes estratégias:
 - Estudo bibliográfico: as [referências](https://github.com/ra-ysa/publichealth/tree/master/references "Referências") foram estudadas para compreender quais são os padrões esperados de cada indicador escolhido;
 - Análise exploratória dos dados: a exploração manual, com eventual auxílio das [ferramentas](#ferramentas), foi necessária para selecionar os dados adequados, processá-los e escolher o que destacar deles; 
@@ -265,14 +240,36 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 - o ideal pra informar politicas publicas eh evidencias (que vêm de dados) + conhecimento do domínio. dados sozinhos, sem que a gt saiba o que queremos deles, nao dizem mta coisa
 
 # Trabalhos Futuros
+A partir dos dados processados neste trabalho, obtivemos estatísticas e geramos visualizações com informações úteis para entender o panorama de alguns indicadores de saúde pública no Brasil. Contudo, a quantidade de análises que podem ser feitas, informação que pode ser obtida e produtos que podem ser gerados usando os mesmos dados é imensa. Além disso, outros dados podem ser obtidos e informar novas análises em combinação com esta. Nesta seção, destacamos algumas possibilidades para trabalhos futuros.
 
-Visualização:
+## Dados 
+- O Tabnet/Datasus tem diversos dados que não foram utilizados neste trabalho, mas podem ser úteis em análises sobre a assistência à saúde no país: indicadores sobre a rede assistencial (estabelecimentos, recursos físicos, recursos humanos, equipes de saúde); indicadores básicos de saúde e assistência à saúde; dados epidemiológicos e de morbidade; dados demográficos e socioeconômicos e outros;
+- O repositório [Global Health Observatory](https://apps.who.int/gho/data/view.main "GHO") (OMS) traz, também, inúmeros dados interessantes sobre saúde no mundo, e pode ser explorado para informar futuras análises sobre o tema.
 
-Com o intuito de divulgar esse trabalho, pensamos em hospedar todas as visualizações contruídas em um servidor. 
-Para isso, tivemos algumas ideias:
-  - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões. (As duas opções de mapas já foram contruídas)
-  - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios.
-  - Além dos mapas, existiria uma página com as análises resultantes dos dados coletados. Nesta parte adicionaremos informações do tipo 'Município com maior densidade de médicos no Brasil', etc.
-  
- Análises:
- @ray add analises interessantes para fazermos no futuro
+## Visualização
+Em relação às visualizações, identificamos atributos que poderiam ser adicionados ou melhorados em trabalhos futuros, em relação àquelas que produzimos aqui:
+- Com o intuito de divulgar esse trabalho, seria possível hospedar todas as visualizações contruídas em um servidor. Para tanto, algumas ideias são:
+  - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram contruídas);
+  - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in";
+  - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
+
+## Análises
+<Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.>
+Rascunho:
+HOSPITAIS
+quantos % dos municípios não têm hospital at all e onde eles se concentram
+% de públicos e privados em cada município/estado
+LEITOS UTI
+quantos % são leitos covid - país, estado e municípios
+Quais municípios/estados têm maior % de leitos covid
+quantos % dos municípios não têm UTI at all e onde eles se concentram
+(Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
+MÉDICOS/ENFERMEIROS
+quantos % atendem no sus - país, estado e municípios
+Quais municípios/estados têm maior % de profissionais que não atendem sus
+Razão medico:enf? Dfça entre quantos estao no sus?
+TODOS
+Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
+como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
+como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
+(Ver se rola: correlação com indicadores raciais? % da pop que usa o SUS/não tem plano de saúde?)
