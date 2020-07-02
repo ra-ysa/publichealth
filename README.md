@@ -207,11 +207,15 @@ Brasil - UFs e Regiões.csv `` e ``Mundo (OMS).csv``.
 
 ### 3. Geração de visualizações
 
-- <b>Mapas</b>: Os mapas foram [gerados](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks") usando Jupyter Notebook, a partir de dados processados por [município](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_municipios_por_estado "Dados municipais por estado"), [estado](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_estado "Dados estaduais"), [região](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_regiao "Dados regionais") e [país](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_pais "Dados mundiais"). 
+- <b>Mapas</b>: Os mapas foram [gerados](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks") usando Jupyter Notebook, a partir de dados processados por [município](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_municipios_por_estado "Dados municipais por estado"), [estado](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_estado "Dados estaduais"), [região](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_regiao "Dados regionais") e [país](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_pais "Dados mundiais"). Os resultados dos mapas foram extraídos para [gifs](https://github.com/ra-ysa/publichealth/tree/master/assets/mapas "Gifs - Mapas") em dois modos de visualização: claro e escuro.
+
+- <b>Gráficos</b>: Os gráficos foram produzidos no [código-fonte](https://github.com/ra-ysa/publichealth/tree/master/src "src") ``stats.py``, com a ferramenta Matplotlib. Seus resultados foram extraídos para [imagens](COLOCAR LINK DEPOIS!!!) .jpg. 
 
 ### 4. Definição e realização de análises estatísticas pertinentes
+Além das visualizações, que fazem parte da análise e interpretação dos resultados, definimos funções em ``stats.py`` capazes de extrair outras métricas de interesse: porcentagem de um recurso selecionado em relação ao total da mesma categoria, para cada entrada (por exemplo, porcentagem de enfermeiros em cada município em relação ao total de enfermeiros no Brasil); N maiores ou menores elementos em uma tabela para um recurso escolhido (por exemplo, 5 países com maiores densidades de médicos); porcentagem de municípios que não possuem um recurso escolhido; densidade (quantidade a cada 10 ou 100 mil habitantes), para o Brasil todo, de um recurso selecionado. 
 
 ### 5. Compilação dos resultados
+Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção <b>Resultados e Discussão - Panorama brasileiro<b>(#panorama-brasileiro).
 
 ### 6. Atividades pervasivas
 Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
@@ -305,9 +309,9 @@ A partir dos dados processados neste trabalho, obtivemos estatísticas e geramos
 - O Tabnet/Datasus tem diversos dados que não foram utilizados neste trabalho, mas podem ser úteis em análises sobre a assistência à saúde no país: indicadores sobre a rede assistencial (estabelecimentos, recursos físicos, recursos humanos, equipes de saúde); indicadores básicos de saúde e assistência à saúde; dados epidemiológicos e de morbidade; dados demográficos e socioeconômicos e outros;
 - O repositório [Global Health Observatory](https://apps.who.int/gho/data/view.main "GHO") (OMS) traz, também, inúmeros dados interessantes sobre saúde no mundo, e pode ser explorado para informar futuras análises sobre o tema.
 
-## Visualização
+## Visualizações
 Em relação às visualizações, identificamos atributos que poderiam ser adicionados ou melhorados em trabalhos futuros, em relação àquelas que produzimos aqui:
-- Com o intuito de divulgar esse trabalho, seria possível hospedar todas as visualizações contruídas em um servidor. Para tanto, algumas ideias são:
+- Seria possível hospedar todas as visualizações contruídas em um mesmo servidor. Para tanto, algumas ideias são:
   - Dar para o usuário a escolha de um 'Dark Mode' ou 'Light Mode' por meio de botões (as duas opções de mapas já foram contruídas);
   - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in";
   - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
