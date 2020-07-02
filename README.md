@@ -79,7 +79,7 @@ Ferramenta | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
 Python | https://www.python.org/ | Linguagem de programação interpretada de alto nível, usada para processar os dados, efetuar análises estatísticas e gerar visualizações
 Pandas | https://pandas.pydata.org/ | Biblioteca de manipulação e análise de dados, usada para auxiliar nas tarefas performadas em linguagem Python
-Plotly | https://plotly.com/python/ | Biblioteca de análise e visualização de dados on-line
+Plotly | https://plotly.com/python/ | Biblioteca de análise e visualização de dados on-line, usada na visualização em mapas
 Jupyter | https://jupyter.org/ | Aplicação web para "desenvolver software de código aberto, padrões abertos e serviços para computação interativa em dezenas de linguagens de programação", usada para criação e execução dos notebooks
 Matplotlib | https://matplotlib.org/ | Biblioteca de visualização, usada para produzir gráficos em linguagem Python
 NumPy | https://numpy.org/ | Biblioteca de computação científica, usada para auxiliar nas tarefas de visualização performadas em linguagem Python
@@ -224,7 +224,7 @@ Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades e
 - <b>Geração de visualizações</b>: 
   - Houve dificuldade para encontrar os perímetros dos municípios e dos estados no formato necessário para utilização da biblioteca [Choropleth](https://plotly.com/python/choropleth-maps/ "Choropleth");
   - Existiam várias divergências entre os nomes dos municípios e dos países presentes nos dois arquivos utilizados na plotagem dos mapas (banco de dados e .json ou arquivo dos códigos dos países). Devido a essas divergências, uma análise minuciosa foi feita para padronização dos nomes e acabamos descobrindo algumas curiosidades sobre os nomes dos municípios brasileiros (estão descritas nos [notebooks de visualização](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks"));
-  - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar gráficos pouco poluído (cores utilizadas, disponibilização das informações, tamanho da imagem e da fonte etc.);
+  - Um desafio interessante foi pensar em como visualizar tantos dados de forma limpa e plotar gráficos pouco poluídos (cores utilizadas, disponibilização das informações, tamanho da imagem e da fonte etc.);
   - Uma ideia que surgiu da necessidade de fazer gráficos não poluídos foi a presença de botões de seleção. Também foi uma dificuldade entender como utilizá-los corretamente, interligando com os dados disponibilizados nos mapas;
 
 - <b>Limitações dos dados utilizados</b>: Algumas limitações são intrísecas aos dados - seja por sua disponibilização, método de coleta ou outros aspectos. Um conjunto de dados é, afinal, um recorte da realidade, e não é factível esperar que seja possível expressá-la integralmente através deles. Abaixo, destacamos as limitações com as quais nos esbarramos no que diz respeito aos dados.
