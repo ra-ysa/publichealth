@@ -122,15 +122,8 @@ A metodologia adotada no trabalho baseou-se nas seguintes estratégias:
 - Análise estatística: baseada, principalmente, em técnicas de estatística descritiva e visualização. Para extrair conhecimento dos dados, foram gerados gráficos de diferentes tipos (boxplot, barra, scatter plot) e visualizações geoespaciais, com mapas coropléticos. 
 
 ## Detalhamento do Projeto
-~~~
-<Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
-
-Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.>
-
-escrita do relatório: pervasiva/iterativa
-~~~
 O percurso do trabalho se deu conforme as etapas descritas nesta seção.
-### 0. Estudo bibliográfico das referências
+### 0. Estudo das referências
 As referências bibliográficas selecionadas para embasar o trabalho ajudaram-nos a entender melhor os indicadores escolhidos e como obter padrões de referência para cada um deles quando se trata de analisar como eles interferem na adequação da assistência à saúde.
 
 - <b>Indicadores hospitalares</b>
@@ -209,7 +202,7 @@ Para cada um desses conjuntos, os dados originais foram pré-processados e limpo
 
 - <b>Mapas</b>: Os mapas foram [gerados](https://github.com/ra-ysa/publichealth/tree/master/notebooks "Notebooks") usando Jupyter Notebook, a partir de dados processados por [município](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_municipios_por_estado "Dados municipais por estado"), [estado](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_estado "Dados estaduais"), [região](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_regiao "Dados regionais") e [país](https://github.com/ra-ysa/publichealth/tree/master/data/processed/dados_por_pais "Dados mundiais"). Os resultados dos mapas foram extraídos para [gifs](https://github.com/ra-ysa/publichealth/tree/master/assets/mapas "Gifs - Mapas") em dois modos de visualização: claro e escuro.
 
-- <b>Gráficos</b>: Os gráficos foram produzidos no [código-fonte](https://github.com/ra-ysa/publichealth/tree/master/src "src") ``stats.py``, com a ferramenta Matplotlib. Seus resultados foram extraídos para [imagens](https://github.com/ra-ysa/publichealth/tree/master/assets/gr%C3%A1ficos "Gráficos") .png. 
+- <b>Gráficos</b>: Os gráficos foram produzidos no [código-fonte](https://github.com/ra-ysa/publichealth/tree/master/src "src") ``stats.py``, com as ferramentas Matplotlib e Seaborn. Seus resultados foram extraídos para [imagens](https://github.com/ra-ysa/publichealth/tree/master/assets/gr%C3%A1ficos "Gráficos") .png. 
 
 ### 4. Definição e realização de análises estatísticas pertinentes
 Além das visualizações, que fazem parte da análise e interpretação dos resultados, definimos funções em ``stats.py`` capazes de extrair outras métricas de interesse: porcentagem de um recurso selecionado em relação ao total da mesma categoria, para cada entrada (por exemplo, porcentagem de enfermeiros em cada município em relação ao total de enfermeiros no Brasil); N maiores ou menores elementos em uma tabela para um recurso escolhido (por exemplo, 5 países com maiores densidades de médicos); porcentagem de municípios que não possuem um recurso escolhido; densidade (quantidade a cada 10 ou 100 mil habitantes), para o Brasil todo, de um recurso selecionado. 
@@ -218,7 +211,7 @@ Além das visualizações, que fazem parte da análise e interpretação dos res
 Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção [<b>Resultados e Discussão - Panorama brasileiro</b>](#panorama-brasileiro).
 
 ### 6. Atividades pervasivas
-Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
+Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e execução de testes de código. 
 
 ## Evolução do Projeto
 Nesta seção, apresentamos aspectos do trabalho que passaram por mudanças significativas. 
@@ -273,13 +266,7 @@ Ao longo do trabalho, além das mudanças relatadas acima, outras dificuldades e
 3) Dados da Organização Mundial da Saúde versus dados nacionais - consistência: a própria instituição [reconhece](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "WHO 2016") que, em suas análises, utiliza dados reportados por cada país, o que pode gerar inconsistências com outros bancos de dados (por exemplo, datasets nacionais) em razão de diferenças de definição de atributos e possibilidades múltiplas de fontes de informação. De fato, isso foi observado para o caso brasileiro: a quantidade de médicos mais recente reportada ao órgão, de 2018, é cerca de 14% maior que a quantidade registrada no Datasus para dezembro do mesmo ano. No caso de profissionais de enfermagem ([enfermeiros/obstetrizes e profissionais associados, como técnicos e auxiliares](https://www.ilo.org/public/english/bureau/stat/isco/docs/resol08.pdf "ILO - International Standard Classification of Occupations"), segundo o [critério](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/nursing-and-midwifery-personnel-(number) "Nursing and midwifery personnel - metadata") usado pelo órgão internacional nesse banco de dados), a discrepância é ainda maior: segundo a OMS, o Brasil tinha mais que o dobro (2119620) da quantidade desses profissionais em 2018 que o número que consta no Datasus (957739) para o mês de dezembro. Diante disso, em prol da consistência, optamos por comparar países somente com os dados da OMS, usando os dados nacionais do Brasil apenas para análises dentro do próprio território e em relação a [padrões de referência internacionais definidos com métodos estatísticos](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "WHO 2016"). (Lembramos, ainda, que tanto esses padrões de referência quanto nossa análise nacional não consideram profissionais de enfermagem associados, somente enfermeiros.)
 
 # Resultados e Discussão
-~~~
-<Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
 
-A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?>
-
-Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser esquecidas; não invalida a análise, mas é importante deixar essas limitações claras (citar reportagem da nature q fala disso)
-~~~
 ## Melhores práticas
 Para realizar análises sobre os dados coletados, uma das preocupações levantadas foi a definição de quais valores de referência devem ser usados como padrão aceitável em cada um dos indicadores escolhidos. Para tanto, recorremos à literatura. 
 
@@ -293,38 +280,55 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 
 ## Panorama brasileiro
 ### Distribuição de recursos de saúde no Brasil
+A variedade de atributos escolhidos para extrair dos dados originais permite uma infinidade de abordagens para olhar a questão da distribuição de recursos de saúde no brasil. Nesta seção, destacamos, a partir das visualizações e resultados gerados pelo código, algumas das que nos pareceram mais interessantes. 
+
+A Figura 1 ilustra, de maneira panorâmica, a distribuição percentual de cada recurso de interesse (em quantidades absolutas) por região. Ou seja: a Região Norte, por exemplo, abriga 8% da população do Brasil, 4% de seus médicos e 7% de seus leitos tipo internação.
 
 | <img src="/assets/gráficos/perc_recursos_geral.png" width="840" height="455" /> | 
 |:--:| 
 | Figura 1. Distribuição percentual, por região, da quantidade total de cada recurso de interesse |
 
-| <img src="/assets/gráficos/perc_enfmed_sus.png" width="700" height="455" /> | 
-|:--:| 
-| Figura 2. Porcentagem de médicos e enfermeiros SUS em relação ao total de sua categoria, por região |
-
-| <img src="/assets/gráficos/perc_hosp_publ.png" width="448" height="336" /> | 
-|:--:| 
-| Figura 3. Porcentagem de hospitais públicos em relação ao total de hospitais, por região |
-
-| <img src="/assets/mapas/selecionados/estados_covid.jpeg" width="700" height="420" /> | 
-|:--:| 
-| Figura 3. Leitos de UTI COVID-19 a cada 10k habitantes, por estado |
-
-| <img src="/assets/mapas/selecionados/municipios_sp_covid.jpeg" width="700" height="420" /> | 
-|:--:| 
-| Figura 3. Leitos de UTI COVID-19 a cada 10k habitantes, por município do estado de SP |
+Chama atenção a desproporção entre alguns indicadores: para a Região Sudeste, por exemplo, todos os recursos são consideravelmente superdimensionados em relação à população, exceto hospitais e leitos tipo internação. As Regiões Nordeste, Centro-Oeste e Sul são bem abastecidas em relação a hospitais - o que o mapa da Figura 2 também evidencia, mesmo quando considerada a densidade a cada 100 mil habitantes (não a quantidade absoluta). 
 
 | <img src="/assets/mapas/selecionados/regioes_hosp.jpeg" width="700" height="420" /> | 
 |:--:| 
-| Figura 3. Hospitais a cada 100k habitantes, por região |
+| Figura 2. Hospitais a cada 100k habitantes, por região |
+
+Contudo, hospitais podem ser bastante heterogêneos, tendo capacidades diferentes de atendimento. O mapa da Figura 3 deixa claro que, quando avaliada a densidade de leitos em vez de hospitais, a Região Sudeste não parece desabastecida. 
 
 | <img src="/assets/mapas/selecionados/regioes_leitos.jpeg" width="700" height="420" /> | 
 |:--:| 
 | Figura 3. Leitos de internação a cada 10k habitantes, por região |
 
+Ao refinar a análise para leitos de UTI dedicados ao tratamento de COVID-19, notamos que os estados mais abastecidos são Rio Grande do Norte, Pernambuco e Espírito Santo, seguidos por Rio de Janeiro e São Paulo. Tocantins, por sua vez, é o estado que conta com a menor densidade desse recurso. É o que mostra o mapa da Figura 4.
+
+| <img src="/assets/mapas/selecionados/estados_covid.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 4. Leitos de UTI COVID-19 a cada 10k habitantes, por estado |
+
+A Figura 5 mostra a densidade de leitos de UTI COVID-19 em cada um dos municípios paulistas. A visualização é útil para identificar desigualdades intraestaduais.
+
+| <img src="/assets/mapas/selecionados/municipios_sp_covid.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 5. Leitos de UTI COVID-19 a cada 10k habitantes, por município do estado de SP |
+
+É interessante destacar, também, a proporção de recursos disponíveis versus não disponíveis na rede pública. O gráfico da Figura 6 revela que há uma tendência de enfermeiros atuarem no SUS em maior proporção que os médicos, em todos os estados. Além disso, visualizamos que a Região Sudeste é a que tem maior proporção desses profissionais não atuando no SUS; na Região Norte, ocorre o oposto. 
+
+| <img src="/assets/gráficos/perc_enfmed_sus.png" width="700" height="455" /> | 
+|:--:| 
+| Figura 6. Porcentagem de médicos e enfermeiros SUS em relação ao total de sua categoria, por região |
+
+Embora a natureza privada de um hospital [não garanta](#dificuldades-e-limitações) automaticamente que pacientes do SUS não sejam atendidos ali, a tendência observada na Figura 6 se repete no gráfico da Figura 7: as regiões Sul e Sudeste têm as menores proporções de hospitais públicos, enquanto a Região Norte tem a maior proporção. 
+
+| <img src="/assets/gráficos/perc_hosp_publ.png" width="448" height="336" /> | 
+|:--:| 
+| Figura 7. Porcentagem de hospitais públicos em relação ao total de hospitais, por região |
+
+A Figura 8 traz distribuições, visualizadas em boxplot, para a densidade de cada um dos recursos de interesse. Médicos e leitos tipo internação são os recursos mais desigualmente distribuídos entre estados; os demais são distribuídos com maior homogeneidade, em especial leitos de UTI.  
+
 | <img src="/assets/gráficos/boxplot_brasil.png" width="3200" height="280" /> | 
 |:--:| 
-| Figura 3. Densidade de cada recurso de interesse no Brasil, a partir dos dados estaduais |
+| Figura 8. Densidade de cada recurso de interesse no Brasil, a partir dos dados estaduais |
 
 ### Posicionamento do Brasil em relação a referências externas
 | <img src="/assets/gráficos/deficit_excesso.png" width="910" height="420" /> | 
@@ -348,6 +352,13 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
   - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
   - Se há desigualdade na distribuição desses recursos no país, qual é sua magnitude e quais são os lugares mais afetados por ela? 
   - Como o Brasil se compara com o resto do mundo na disponibilidade de médicos e enfermeiros à população?
+~~~
+<Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
+
+A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?>
+
+Vale lembrar q rolam algumas limitações dos próprios dados q não podem ser esquecidas; não invalida a análise, mas é importante deixar essas limitações claras (citar reportagem da nature q fala disso)
+~~~
 
 # Conclusões
 ~~~
