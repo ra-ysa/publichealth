@@ -215,7 +215,7 @@ Brasil - UFs e Regiões.csv `` e ``Mundo (OMS).csv``.
 Além das visualizações, que fazem parte da análise e interpretação dos resultados, definimos funções em ``stats.py`` capazes de extrair outras métricas de interesse: porcentagem de um recurso selecionado em relação ao total da mesma categoria, para cada entrada (por exemplo, porcentagem de enfermeiros em cada município em relação ao total de enfermeiros no Brasil); N maiores ou menores elementos em uma tabela para um recurso escolhido (por exemplo, 5 países com maiores densidades de médicos); porcentagem de municípios que não possuem um recurso escolhido; densidade (quantidade a cada 10 ou 100 mil habitantes), para o Brasil todo, de um recurso selecionado. 
 
 ### 5. Compilação dos resultados
-Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção <b>Resultados e Discussão - Panorama brasileiro<b>(#panorama-brasileiro).
+Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção <b>Resultados e Discussão - Panorama brasileiro</b>(#panorama-brasileiro).
 
 ### 6. Atividades pervasivas
 Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
