@@ -305,11 +305,34 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 |:--:| 
 | Figura 3. Porcentagem de hospitais públicos em relação ao total de hospitais, por região |
 
+| <img src="/assets/mapas/selecionados/estados_covid.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Leitos de UTI COVID-19 a cada 10k habitantes, por estado |
+
+| <img src="/assets/mapas/selecionados/municipios_sp_covid.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Leitos de UTI COVID-19 a cada 10k habitantes, por município do estado de SP |
+
+| <img src="/assets/mapas/selecionados/regioes_hosp.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Hospitais a cada 100k habitantes, por região |
+
+| <img src="/assets/mapas/selecionados/regioes_leitos.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Leitos de internação a cada 10k habitantes, por região |
+
 ### Posicionamento do Brasil em relação a referências externas
 | <img src="/assets/gráficos/deficit_excesso.png" width="910" height="420" /> | 
 |:--:| 
 | Figura 3. Décific/excesso de profissionais por estado |
-- mundo e densidade onu / boxplots
+
+| <img src="/assets/mapas/selecionados/mundo_enf.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Densidade de profissionais de enfermagem no mundo, com destaque para o Brasil |
+
+| <img src="/assets/mapas/selecionados/mundo_med.jpeg" width="700" height="420" /> | 
+|:--:| 
+| Figura 3. Densidade de médicos no mundo, com destaque para o Brasil |
 
 
 - Panorama da situação brasileira
