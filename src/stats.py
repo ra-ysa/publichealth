@@ -2,6 +2,7 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
 import numpy as np 
+import seaborn as sns 
 
 # lista de indices que representam as regioes brasileiras em dataset_uf
 indices_regioes = [0, 8, 18, 23, 27]
@@ -63,10 +64,6 @@ def recurso_nmin(n, recurso, nome, dataset):
 	df = df[[nome, recurso]]
 	return df
 
-# devolve boxplot 
-def boxplot(recurso, dataset):
-	pass  
-
 # devolve % de municipios que nao possuem um determinado recurso (valor==0)
 def percent_zero(dataset, recurso):
 	tam_df = len(dataset)
@@ -84,14 +81,61 @@ def densidade_geral(dataset, recurso):
 	pop_rel_sum = dataset["População"].sum() / denominador
 	recurso_sum = dataset[recurso].sum()
 	densidade = recurso_sum / pop_rel_sum 
-	qtd_pessoas_para_1 = denominador / densidade 
-	return round(densidade, 2), round(qtd_pessoas_para_1, 2)
+	return round(densidade, 2)
 
+# plota boxplots de densidades de recursos para um dataset
+def boxplot_densidades(dataset):
+    dataset = dataset[[s for s in dataset.columns if "habitantes" in s]]
+
+    sns.set(rc={'figure.figsize':(40,8.27)})
+    bx = sns.boxplot(data=dataset, orient="h", palette="Set2")
+    bx.yaxis.grid(False) # esconde gridlines horizontais
+    bx.xaxis.grid(True) # mostra gridlines verticais
+    bx.tick_params(labelsize=15)
+    bx.axes.set_title("Densidades de cada recurso no Brasil", fontsize=20)
+    bx.get_figure().savefig("../assets/gráficos/boxplot_brasil.png")
+
+# plota boxplots para os dados mundiais
+def boxplot_densidades_paises(dataset):
+    fig, bx = plt.subplots(2, 1)
+    
+    brasil1 = float(dataset[dataset['País'] == 'Brazil']['Profissionais de enfermagem a cada 10k habitantes'])
+    df1 = dataset['Profissionais de enfermagem a cada 10k habitantes']
+    #sns.set(rc={'figure.figsize':(11.7,8.27)})
+    bx1 = sns.boxplot(data=df1, orient="h", palette="Set2", ax=bx[0])
+    bx1.yaxis.grid(False) # esconde gridlines horizontais
+    bx1.xaxis.grid(True) # mostra gridlines verticais
+    bx1.tick_params(labelsize=0)
+    bx1.axes.set_title("Densidade de profissionais de enfermagem por país",fontsize=12)
+    bx1.axvline(brasil1, ls='--', c = 'red')
+    #bx1.get_figure().savefig("../assets/gráficos/boxplot_mundo_enf.png")
+    
+    brasil2 = float(dataset[dataset['País'] == 'Brazil']['Médicos a cada 10k habitantes'])
+    df2 = dataset['Médicos a cada 10k habitantes']
+    sns.set(rc={'figure.figsize':(20,15)})
+    bx2 = sns.boxplot(data=df2, orient="h", palette="Set2", ax=bx[1])
+    bx2.yaxis.grid(False) # esconde gridlines horizontais
+    bx2.xaxis.grid(True) # mostra gridlines verticais
+    bx2.tick_params(labelsize=15)
+    bx2.axes.set_title("Densidade de médicos por país",fontsize=12)
+    bx2.axvline(brasil2, ls='--', c = 'red')
+    bx2.get_figure().savefig("../assets/gráficos/boxplot_mundo.png")
+    
 def stats_municipios(dataset_mun):
+	print("Cinco municípios brasileiros com mais médicos a cada 10k habitantes:")
 	print(recurso_nmax(5, "Médicos a cada 10k habitantes", "Município", dataset_mun))
+	print("Cinco municípios brasileiros com menos enfermeiros (desconsiderando zero):")
 	print(recurso_nmin(5, "Enfermeiros - Total", "Município", dataset_mun))
+	print("Porcentagem de municípios brasileiros sem hospitais:")
 	print(percent_zero(dataset_mun, "Hospitais - Total"))
+
+	# os dados a seguir referem-se ao pais, mas usam o dataset de municipios para efetuar os calculos
+	print("Densidade de enfermeiros a cada 10k habitantes no Brasil:")
 	print(densidade_geral(dataset_mun, "Enfermeiros - Total"))
+	print("Densidade de médicos a cada 10k habitantes no Brasil:")
+	print(densidade_geral(dataset_mun, "Médicos - Total"))
+	print("Densidade de hospitais a cada 100k habitantes no Brasil:")
+	print(densidade_geral(dataset_mun, "Hospitais - Total"))
 
 def stats_estados(dataset_uf_reg):
 	# extrai apenas regioes
@@ -102,6 +146,9 @@ def stats_estados(dataset_uf_reg):
 					19, 20, 21, 22,
 					24, 25, 26,
 					28, 29, 30, 31], :]
+
+	# plota boxplots
+	boxplot_densidades(dataset_uf)
 
 	# plota % de enfermeiros e medicos sus vs regiao
 	x = dataset_reg["Região ou UF"]
@@ -166,13 +213,22 @@ def stats_estados(dataset_uf_reg):
 	plt.savefig("../assets/gráficos/perc_recursos_geral.png")
 
 def stats_paises(dataset_paises):
+	print("Países com mais profissionais de enfermagem:")
 	print(recurso_nmax(5, "Profissionais de enfermagem - Total", "País", dataset_paises))
+	print("Países com menos profissionais de enfermagem:")
 	print(recurso_nmin(5, "Profissionais de enfermagem - Total", "País", dataset_paises))
+	print("Países com mais profissionais de enfermagem a cada 10k habitantes:")
 	print(recurso_nmax(5, "Profissionais de enfermagem a cada 10k habitantes", "País", dataset_paises))
+	print("Países com menos profissionais de enfermagem a cada 10k habitantes:")
 	print(recurso_nmin(5, "Profissionais de enfermagem a cada 10k habitantes", "País", dataset_paises))
+	print("Países com mais médicos:")
 	print(recurso_nmax(5, "Médicos - Total", "País", dataset_paises))
+	print("Países com menos médicos:")
 	print(recurso_nmin(5, "Médicos - Total", "País", dataset_paises))
+	print("Países com mais médicos a cada 10k habitantes:")
 	print(recurso_nmax(5, "Médicos a cada 10k habitantes", "País", dataset_paises))
+	print("Países com menos médicos a cada 10k habitantes:")
 	print(recurso_nmin(5, "Médicos a cada 10k habitantes", "País", dataset_paises))
 
-
+	# plota boxplots
+	boxplot_densidades_paises(dataset_paises)
