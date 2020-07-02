@@ -1,27 +1,27 @@
 # Ciência e visualização de dados em Saúde Pública: um panorama de indicadores no Brasil
 ## Data science and visualization in Public Health: an overview of indicators in Brazil
 
-[Resumo]
-  [Abstract]
-[Equipe]
-[Vídeo do Projeto]
-[Introdução e Motivação]
-  [Perguntas de Pesquisa]
-  [Objetivos do projeto]
-[Recursos e Métodos]
-  [Bases de Dados]
-  [Ferramentas]
-[Metodologia]
-  [Detalhamento do Projeto]
-  [Evolução do Projeto]
-[Resultados e Discussão]
-  [Melhores práticas]
-  [Panorama brasileiro]
-[Conclusões]
-[Trabalhos Futuros]
-  [Dados]
-  [Visualizações]
-  [Indicadores e Análises]
+- [Resumo](#resumo)
+  - [Abstract](#abstract)
+- [Equipe](#equipe)
+- [Vídeo do Projeto](#vídeo-do-projeto)
+- [Introdução e Motivação](#introdução-e-motivação)
+  - [Perguntas de Pesquisa](#perguntas-de-pesquisa)
+  - [Objetivos do projeto](#objetivos-do-projeto)
+- [Recursos e Métodos](#recursos-e-métodos)
+  - [Bases de Dados](#bases-de-dados)
+  - [Ferramentas](#ferramentas)
+- [Metodologia](#metodologia)
+  - [Detalhamento do Projeto](#detalhamento-do-projeto)
+  - [Evolução do Projeto](#evolução-do-projeto)
+- [Resultados e Discussão](#resultados-e-discussão)
+  - [Melhores práticas](#melhores-práticas)
+  - [Panorama brasileiro](#panorama-brasileiro)
+- [Conclusões](#conclusões)
+- [Trabalhos Futuros](#trabalhos-futuros)
+  - [Dados](#dados)
+  - [Visualizações](#visualizações)
+  - [Indicadores e Análises](#indicadores-e-análises)
 
 # Resumo
 Pensar em soluções na área da saúde passa por pensar em saúde pública: a saúde individual não é descolada da saúde coletiva. A formulação, implementação e avaliação de políticas públicas em saúde permite que intervenções sejam adequadas e tragam maior benefício para a população; um bom desenho dessas políticas, por sua vez, exige extração e compreensão de indicadores pertinentes, processo que pode ser enriquecido, também, por visualizações de dados apropriadas. Neste trabalho, buscamos compreender a oferta, no Brasil, de recursos essenciais em saúde selecionados, de modo a construir um panorama do país na área. Para tanto, selecionamos bancos relevantes e realizamos análise de dados baseada em estudo bibliográfico, análise exploratória de dados, estatística descritiva e geração de visualizações. Identificamos métricas importantes sobre a distribuição de determinados recursos de saúde no Brasil e no mundo, que podem informar análises futuras e/ou políticas públicas em saúde. 
