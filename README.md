@@ -22,7 +22,7 @@ Além disso, também conseguimos os dados de quantidade e densidade de médicos 
 Por fim, fizemos algumas análises estatísticas com o auxílio dessas visualizações.
 
 
-# Abstract
+## Abstract
 Is very difficult to find a pleasent, clean and simple visualization of brazilian public health data.
 Thinking about it, we decided to look for some data, such as:
 
@@ -52,6 +52,7 @@ O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqu
 # Introdução e Motivação
 ~~~
 <Descrição do tema do projeto, incluindo motivação, contexto gerador e caracterização do problema. A introdução também pode apresentar iniciativas correlatas para lidar com o problema (não obrigatório) e deve introduzir de forma mais detalhada que o resumo a solução proposta e resultados alcançados. Aqui também são apresentadas as seções do projeto.>
+https://mapasinterativos.ibge.gov.br/covid/saude/
 ~~~
 
 ## Perguntas de Pesquisa
@@ -450,9 +451,9 @@ Países com menos médicos a cada 10k habitantes:
 # Conclusões
 A análise conduzida neste trabalho não é, de forma alguma, exaustiva; com os dados aqui selecionados e pré-processados, muitas outras métricas poderiam ser extraídas, e dados adicionais trariam possibilidades de análise infinitas. Acreditamos, contudo, que os resultados expostos são relevantes e agregam conhecimento - ou, no mínimo, ajudam a posicionar um ponto de partida - sobre o panorama de indicadores importantes de saúde pública no Brasil. 
 
-A formulação, implementação e avaliação de políticas públicas é enriquecida quando baseada em evidências; estamos convencidas de que uma análise de dados apropriada é uma ferramenta poderosa para coletar essas evidências e interpretá-las adequadamente. Destacamos, porém, que obter dados não é suficiente; uma boa análise compreende estudo do problema, estudo da literatura pertinente, conhecimento do domínio, uso adequado e ético das ferramentas e definição de objetivos. Neste trabalho, ter uma pergunta de pesquisa sobre a qual nos guiar foi essencial.
+A formulação, implementação e avaliação de políticas públicas é enriquecida quando baseada em evidências; estamos convencidas de que uma análise de dados apropriada é uma ferramenta poderosa para coletar essas evidências e interpretá-las adequadamente. Destacamos, porém, que obter dados não é suficiente; uma boa análise compreende estudo do problema, estudo da literatura pertinente, conhecimento do domínio, uso adequado e ético das ferramentas e definição de objetivos. Neste trabalho, ter uma pergunta de pesquisa segundo a qual nos guiar foi essencial.
 
-Do ponto de vista técnico, conseguimos superar boa parte das dificuldades que surgiram - ou readequar o projeto quando isso não foi possível. A etapa de pré-processamento/limpeza dos dados foi, provavelmente, a que mais tomou tempo e trabalho do grupo; em projetos futuros, certamente não subestimaremos o tempo necessário para dedicar a essa atividade. Além disso, as visualizações, aliadas importantíssimas do processo, não devem ser negligenciadas: apesar da grande disponibilidade de ferramentas para construí-las, definir os parâmetros de uma boa visualização não é trivial, em especial quando não se tem noções de design.
+Do ponto de vista técnico, conseguimos superar boa parte das dificuldades que surgiram - ou readequar o projeto quando isso não foi possível. A etapa de pré-processamento/limpeza dos dados foi, provavelmente, a que mais exigiu tempo e trabalho do grupo; em projetos futuros, certamente não subestimaremos o tempo necessário para dedicar a essa atividade. Além disso, as visualizações, aliadas importantíssimas do processo, não devem ser negligenciadas: apesar da grande disponibilidade de ferramentas para construí-las, definir os parâmetros de uma boa visualização não é trivial, em especial quando não se tem noções de design.
 
 Em relação aos resultados, confirmamos a hipótese sobre a desigualdade interna que existe no Brasil quando se trata de assistência a saúde; porém, essa desigualdade se manifesta de diferentes maneiras, e entendê-las é importante para desenhar intervenções apropriadas. Além disso, observamos que, apesar de apresentar alguns problemas, a plataforma Tabnet/Datasus é rica, relativamente fácil de usar e segue a muitas das [recomendações de boas práticas](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "WHO, 2016") para construção de bancos de dados sobre saúde pública, podendo ser uma grande aliada para informar análises na área.
 
