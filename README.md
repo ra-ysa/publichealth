@@ -253,23 +253,29 @@ Em relação às visualizações, identificamos atributos que poderiam ser adici
   - Interligar os diferentes mapas se seguinte forma: a tela inicial seria com o mapa dos países. Assim, conforme clicamos no Brasil, existiria uma animação "zoom in" para o mapa das grandes regiões. Da mesma forma, acessaríamos os mapas dos estados e dos municípios - a granularidade seria refinada com o "zoom in";
   - Criar uma página (como um dashboard, por exemplo) com as análises resultantes dos dados coletados. Poderia ser permitida, ainda, a seleção de indicadores de interesse (como 'Município com maior densidade de médicos no Brasil') para visualização de resultados.
 
-## Análises
+## Indicadores e Análises
+Para além do que já foi extraído neste trabalho, sugerimos alguns indicadores e análises que poderiam ser estudados em trabalhos futuros - alguns dos quais, inclusive, podem ser levantados a partir do próprio código do projeto, com poucas adaptações:
+- Indicadores hospitalares
+  - bla
+- Indicadores de recursos humanos
+  - Enriquecer o estudo de diferenças entre médicos e enfermeiros (por exemplo, diferença na % de cada categoria que atende pelo SUS) com testes de hipóteses;
+  - Acrescentar demais profissionais de saúde na análise;
+  - Estudar as proporções entre profissionais de saúde (por exemplo, enfermeiros:médicos);
+- Todos os indicadores
+  - Aumentar ou mudar a granularidade das análises - identificando, por exemplo, como um (ou mais) município(s) de interesse se posiciona(m) em relação à média do estado, do país, da região e do mundo, dentre outras combinações possíveis;
+- Outros indicadores (sugestões)
+  - Indicadores sociodemográficos - por exemplo, raciais, de renda ou de gênero - podem ser combinados a indicadores de saúde, com o objetivo de verificar a existência de correlações relevantes (ainda que não haja relação automática de causalidade a partir de uma correlação, isso pode indicar um caminho interessante para o qual olhar e, aliado a conhecimento do domínio, fortalecer ou rejeitar hipóteses de causalidade); 
+  - Indicadores detalhados sobre quais parcelas da população usam diferentes tipos de prestadores (ex: pessoas que usam exclusivamente o SUS, pessoas que têm convênios de saúde etc.).
+  
 <Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.>
 Rascunho:
 HOSPITAIS
-quantos % dos municípios não têm hospital at all e onde eles se concentram
+quantos 
+% dos municípios não têm hospital at all e onde eles se concentram
 % de públicos e privados em cada município/estado
 LEITOS UTI
 quantos % são leitos covid - país, estado e municípios
 Quais municípios/estados têm maior % de leitos covid
 quantos % dos municípios não têm UTI at all e onde eles se concentram
 (Ver se rola: algum município tem mais leitos do que o adequado? - vide artigo)
-MÉDICOS/ENFERMEIROS
-quantos % atendem no sus - país, estado e municípios
-Quais municípios/estados têm maior % de profissionais que não atendem sus
-Razão medico:enf? Dfça entre quantos estao no sus?
-TODOS
-Boxplot p/ estados (quais são menos desiguais? DP nos mostra isso)
-como o município se posiciona em relação à média do estado, do país, do mundo e de alguma recomendação
-como o estado se posiciona em relação à média do país, do mundo e de alguma recomendação
-(Ver se rola: correlação com indicadores raciais? % da pop que usa o SUS/não tem plano de saúde?)
+
