@@ -214,7 +214,7 @@ Para cada um desses conjuntos, os dados originais foram pré-processados e limpo
 Além das visualizações, que fazem parte da análise e interpretação dos resultados, definimos funções em ``stats.py`` capazes de extrair outras métricas de interesse: porcentagem de um recurso selecionado em relação ao total da mesma categoria, para cada entrada (por exemplo, porcentagem de enfermeiros em cada município em relação ao total de enfermeiros no Brasil); N maiores ou menores elementos em uma tabela para um recurso escolhido (por exemplo, 5 países com maiores densidades de médicos); porcentagem de municípios que não possuem um recurso escolhido; densidade (quantidade a cada 10 ou 100 mil habitantes), para o Brasil todo, de um recurso selecionado. 
 
 ### 5. Compilação dos resultados
-Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção <b>Resultados e Discussão - Panorama brasileiro</b>(#panorama-brasileiro).
+Os destaques gerados pela interpretação das visualizações e análises estatísticas foram reunidos na seção [<b>Resultados e Discussão - Panorama brasileiro</b>](#panorama-brasileiro).
 
 ### 6. Atividades pervasivas
 Ao longo do projeto, algumas atividades foram realizadas de maneira pervasiva, em todas as etapas, iterativamente com adequações conforme o trabalho evoluía. Fazem parte desse grupo as atividades de escrita/revisão do relatório e realização de testes de código. 
@@ -291,6 +291,14 @@ Para indicadores de recursos humanos, contudo, parece ser mais factível encontr
 Com isso, identificamos que, para os indicadores hospitalares, estabelecer padrões universais é difícil, o que aumenta a importância de considerar o contexto local/regional e fazer comparações entre pares de mesma granularidade ou características similares - por exemplo, entre municípios ou estados. Para a avaliação sobre recursos humanos, o contexto local/regional e as comparações também são essenciais, mas a existência de um valor de referência fornece um elemento a mais de análise. 
 
 ## Panorama brasileiro
+### Distribuição de recursos de saúde no Brasil
+
+![teste](assets/gráficos/%_recursos_geral.png "titulo")
+
+- Panorama da situação brasileira
+  - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
+  - Se há desigualdade na distribuição desses recursos no país, qual é sua magnitude e quais são os lugares mais afetados por ela? 
+  - Como o Brasil se compara com o resto do mundo na disponibilidade de médicos e enfermeiros à população?
 
 # Conclusões
 ~~~
