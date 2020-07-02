@@ -113,6 +113,7 @@ Plotly | https://plotly.com/python/ | Biblioteca de análise e visualização de
 Jupyter | https://jupyter.org/ | Aplicação web para "desenvolver software de código aberto, padrões abertos e serviços para computação interativa em dezenas de linguagens de programação".
 Matplotlib | https://matplotlib.org/ | Biblioteca de visualização, usada para produzir gráficos em linguagem Python.
 NumPy | https://numpy.org/ | Biblioteca de computação científica, usada para auxiliar nas tarefas de visualização performadas em linguagem Python.
+Seaborn | https://seaborn.pydata.org/ | Biblioteca de visualização, usada para produzir os gráficos boxplot em linguagem Python. 
 
 # Metodologia
 A metodologia adotada no trabalho baseou-se nas seguintes estratégias:
