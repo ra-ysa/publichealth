@@ -204,4 +204,4 @@ def processa_municipios():
 
 	df = pd.DataFrame(data=dados)
 	util.write_to_csv(df, "Brasil - Municípios")
-	stats.stats_municipios(df)
+	stats.stats_municipios(pd.read_csv("../data/processed/Brasil - Municípios.csv"))

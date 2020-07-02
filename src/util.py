@@ -78,7 +78,8 @@ def match(lista_nomes, dataset, atributo, ordenador):
 			else:
 				r.append(valor)
 		else:
-			r.append("-")
+			# acrescenta zero quando nao ha dado
+			r.append(0)
 	return r 
 
 # converte codigo estadual para a sigla correspondente

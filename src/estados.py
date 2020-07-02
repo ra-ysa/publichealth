@@ -185,4 +185,4 @@ def processa_estados():
 
 	df = pd.DataFrame(data=dados)
 	util.write_to_csv(df, "Brasil - UFs e Regiões")
-	stats.stats_estados(df)
+	stats.stats_estados(pd.read_csv("../data/processed/Brasil - UFs e Regiões.csv"))

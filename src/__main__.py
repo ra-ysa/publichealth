@@ -4,6 +4,6 @@ import municipios
 import estados
 import paises
 
-#municipios.processa_municipios()
+municipios.processa_municipios()
 estados.processa_estados()
 paises.processa_paises()

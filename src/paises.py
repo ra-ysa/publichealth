@@ -41,4 +41,4 @@ def processa_paises():
 
 	df = pd.DataFrame(data=dados)
 	util.write_to_csv(df, "Mundo (OMS)")
-	stats.stats_paises(df)
+	stats.stats_paises(pd.read_csv("../data/processed/Mundo (OMS).csv"))
