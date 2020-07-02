@@ -2,25 +2,7 @@
 ## Data science and visualization in Public Health: an overview of indicators in Brazil
 
 # Resumo
-Existe uma dificuldade grande de encontrar dados de saúde pública brasileira que tenham uma visualização agradável e simples para o usuário.
-Pensando nisso, decidimos buscar alguns dados, como:
-
-- Quantidade de hospitais públicos e não públicos por estado, município e região brasileira
-- Quantidade de enfermeiros do SUS ou não por estado, município e região brasileira
-- Quantidade de médicos do SUS ou não por estado, município e região brasileira
-- Quantidade de leitos de internação do SUS ou não por estado, município e região brasileira
-- Quantidade de leitos de UTI do SUS ou não por estado, município e região brasileira
-- Enfermeiros a cada 10k habitantes por estado, município e região brasileira
-- Médicos a cada 10k habitantes por estado, município e região brasileira
-- Hospitais a cada 100k habitantes por estado, município e região brasileira
-- Leitos (internação) a cada 10k habitantes por estado, município e região brasileira
-- Leitos UTI a cada 10k habitantes por estado, município e região brasileira
-
-Com os dados em mãos, criamos visualizações em forma de *mapas de Choropleth* para conseguirmos comparar, por meio de cores as densidades de hospitais, médicos, enfermeiros, leitos e hospitais entre diferentes municípios, estados e regiões brasileras.
-Além disso, também conseguimos os dados de quantidade e densidade de médicos e enfermeiros a cada 100k habitantes para diversos países, sendo possível criar uma visualização mais macro por países.
-
-Por fim, fizemos algumas análises estatísticas com o auxílio dessas visualizações.
-
+Pensar em soluções na área da saúde passa por pensar em saúde pública: a saúde individual não é descolada da saúde coletiva. A formulação, implementação e avaliação de políticas públicas em saúde permite que intervenções sejam adequadas e tragam maior benefício para a população; um desenho adequado dessas políticas, por sua vez, exige extração e compreensão de indicadores pertinentes, processo que pode ser enriquecido, também, por visualizações apropriadas. Neste trabalho, buscamos compreender a oferta, no Brasil, de recursos essenciais em saúde selecionados, de modo a construir um panorama do país na área. Para tanto, selecionamos bancos pertinentes e realizamos análise de dados baseada em estudo bibliográfico, análise exploratória de dados, estatística descritiva e geração de visualizações. Identificamos métricas importantes sobre a distribuição de determinados recursos de saúde no Brasil e no mundo, que podem informar análises futuras e/ou políticas públicas em saúde. 
 
 ## Abstract
 Is very difficult to find a pleasent, clean and simple visualization of brazilian public health data.
