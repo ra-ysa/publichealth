@@ -292,8 +292,12 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 
 ## Panorama brasileiro
 ### Distribuição de recursos de saúde no Brasil
-
-![teste](assets/gráficos/%_recursos_geral.png "titulo")
+  
+<figure>
+  <img src="/assets/gráficos/perc_recursos_geral.png" alt="Distribuição de recursos - Geral"
+       title="Distribuição de recursos - Geral" width="840" height="455" />
+  <figcaption>Fig. 1 - Distribuição dos recursos selecionados por região, em porcentagem.</figcaption>
+</figure>
 
 - Panorama da situação brasileira
   - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
