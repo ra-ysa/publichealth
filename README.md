@@ -292,12 +292,25 @@ Com isso, identificamos que, para os indicadores hospitalares, estabelecer padr�
 
 ## Panorama brasileiro
 ### Distribuição de recursos de saúde no Brasil
-  
-<figure>
-  <img src="/assets/gráficos/perc_recursos_geral.png" alt="Distribuição de recursos - Geral"
-       title="Distribuição de recursos - Geral" width="840" height="455" />
-  <figcaption>Fig. 1 - Distribuição dos recursos selecionados por região, em porcentagem.</figcaption>
-</figure>
+
+| <img src="/assets/gráficos/perc_recursos_geral.png" width="840" height="455" /> | 
+|:--:| 
+| Figura 1. Distribuição percentual, por região, da quantidade total de cada recurso de interesse |
+
+| <img src="/assets/gráficos/perc_enfmed_sus.png" width="700" height="455" /> | 
+|:--:| 
+| Figura 2. Porcentagem de médicos e enfermeiros SUS em relação ao total de sua categoria, por região |
+
+| <img src="/assets/gráficos/perc_hosp_publ.png" width="448" height="336" /> | 
+|:--:| 
+| Figura 3. Porcentagem de hospitais públicos em relação ao total de hospitais, por região |
+
+### Posicionamento do Brasil em relação a referências externas
+| <img src="/assets/gráficos/deficit_excesso.png" width="910" height="420" /> | 
+|:--:| 
+| Figura 3. Décific/excesso de profissionais por estado |
+- mundo e densidade onu / boxplots
+
 
 - Panorama da situação brasileira
   - Como é a distribuição desses recursos nos municípios, estados e regiões brasileiros? 
