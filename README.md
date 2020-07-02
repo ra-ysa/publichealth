@@ -13,7 +13,6 @@
   - [Ferramentas](#ferramentas)
 - [Metodologia](#metodologia)
   - [Detalhamento do Projeto](#detalhamento-do-projeto)
-    - [0. Estudo das referências](#estudo-das-referências)
   - [Evolução do Projeto](#evolução-do-projeto)
 - [Resultados e Discussão](#resultados-e-discussão)
   - [Melhores práticas](#melhores-práticas)
