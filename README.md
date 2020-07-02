@@ -1,6 +1,28 @@
 # Ciência e visualização de dados em Saúde Pública: um panorama de indicadores no Brasil
 ## Data science and visualization in Public Health: an overview of indicators in Brazil
 
+[Resumo]
+  [Abstract]
+[Equipe]
+[Vídeo do Projeto]
+[Introdução e Motivação]
+  [Perguntas de Pesquisa]
+  [Objetivos do projeto]
+[Recursos e Métodos]
+  [Bases de Dados]
+  [Ferramentas]
+[Metodologia]
+  [Detalhamento do Projeto]
+  [Evolução do Projeto]
+[Resultados e Discussão]
+  [Melhores práticas]
+  [Panorama brasileiro]
+[Conclusões]
+[Trabalhos Futuros]
+  [Dados]
+  [Visualizações]
+  [Indicadores e Análises]
+
 # Resumo
 Pensar em soluções na área da saúde passa por pensar em saúde pública: a saúde individual não é descolada da saúde coletiva. A formulação, implementação e avaliação de políticas públicas em saúde permite que intervenções sejam adequadas e tragam maior benefício para a população; um bom desenho dessas políticas, por sua vez, exige extração e compreensão de indicadores pertinentes, processo que pode ser enriquecido, também, por visualizações de dados apropriadas. Neste trabalho, buscamos compreender a oferta, no Brasil, de recursos essenciais em saúde selecionados, de modo a construir um panorama do país na área. Para tanto, selecionamos bancos relevantes e realizamos análise de dados baseada em estudo bibliográfico, análise exploratória de dados, estatística descritiva e geração de visualizações. Identificamos métricas importantes sobre a distribuição de determinados recursos de saúde no Brasil e no mundo, que podem informar análises futuras e/ou políticas públicas em saúde. 
 
@@ -331,7 +353,7 @@ A Figura 9 mostra, por estado, a quantidade de profissionais de saúde considera
 
 | <img src="/assets/gráficos/deficit_excesso.png" width="910" height="420" /> | 
 |:--:| 
-| Figura 9. Décific/excesso de profissionais por estado |
+| Figura 9. Déficit/excesso de profissionais por estado |
 
 Os mapas com dados do mundo ajudam a entender como os indicadores do Brasil se comparam aos de outros países. As Figuras 10 e 11 mostram, respectivamente, a densidade de profissionais de enfermagem e médicos por país, com destaque para o Brasil. Segundo essas visualizações, não parecemos distantes das médias do continente americano e mundial. 
 
