@@ -46,7 +46,7 @@ One cannot neglect public health issues when developing solutions in health: ind
 * Raysa Masson Benatti - 176483
 
 # Vídeo do Projeto
-O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqui](http://shorturl.at/eNP39 "Vídeo") (visível a pessoas logadas em e-mail com domínio Unicamp).
+O vídeo introdutório do projeto, gravado em 10/05/2020, pode ser acessado [aqui](https://youtu.be/vnbFSYRnWig "Vídeo").
 
 # Introdução e Motivação
 A [escassez](https://github.com/ra-ysa/publichealth/blob/master/references/2016-who-health-workforce.pdf "OMS, 2016") de profissionais de saúde no mundo estimada para 2013 era de aproximadamente 17.4 milhões; para 2030, a projeção é de 14.5 milhões - dos quais cerca de 640 mil no continente americano. Conhecer esse e outros indicadores é importante para formular intervenções e políticas públicas adequadas na área da saúde, de modo que o benefício à população seja maximizado - afinal, não há como pensar em saúde individual sem considerar sua relação direta com a saúde coletiva.
